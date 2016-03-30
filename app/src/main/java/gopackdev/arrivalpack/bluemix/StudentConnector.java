@@ -2,6 +2,7 @@ package gopackdev.arrivalpack.bluemix;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.Request;
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -28,11 +29,11 @@ public class StudentConnector {
     public StudentConnector(BMSClient c){
         this.client = c;
     }
-
-    public boolean addStudentToCloudant(StudentBean bean, Context ctx){
+    private Context context;
+    public void addStudentToCloudant(StudentBean bean, Context ctx){
         Request request = new Request(client.getBluemixAppRoute() + subURL, Request.POST);
         String json = bean.JSONFormat();
-
+        context = ctx;
         HashMap headers = new HashMap();
         List<String> cType = new ArrayList<>();
         cType.add("application/json");
@@ -49,7 +50,8 @@ public class StudentConnector {
             @Override
             public void onSuccess(Response response) {
                 Log.i("StudentConnector", "Student created successfully");
-                addStudentResult = true;
+                Toast.makeText(context, "Account Created!", Toast.LENGTH_LONG).show();
+
             }
 
             // On failure, log errors
@@ -64,9 +66,8 @@ public class StudentConnector {
                 if (extendedInfo != null) {
                     Log.e("StudentConnector", "createStudent failed with error: " + extendedInfo.toString());
                 }
-                addStudentResult = false;
+                Toast.makeText(context, "Account Failed To Create!",Toast.LENGTH_LONG).show();
             }
         });
-        return addStudentResult;
     }
 }

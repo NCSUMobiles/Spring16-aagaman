@@ -36,6 +36,7 @@ public class Register extends AppCompatActivity {
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
+        //Toast.makeText(this, "Account Created!", Toast.LENGTH_SHORT);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -65,14 +66,9 @@ public class Register extends AppCompatActivity {
                 2300, 800);
 
                 StudentConnector connector = new StudentConnector(client);
-                boolean rst = connector.addStudentToCloudant(bean, getApplicationContext());
-                if(rst == true){
-                    Toast.makeText(getApplicationContext(), "Account Created!",Toast.LENGTH_SHORT);
-                    closeAcitvity();
-                }else{
-                    Toast.makeText(getApplicationContext(), "Account Failed To Create!",Toast.LENGTH_SHORT);
-                }
+                connector.addStudentToCloudant(bean, getApplicationContext());
 
+                closeAcitvity();
             }
         });
     }
