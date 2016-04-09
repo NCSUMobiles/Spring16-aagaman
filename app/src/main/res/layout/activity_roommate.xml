@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="gopackdev.arrival.HomePage">
+    tools:context="gopackdev.arrival.Roommate">
 
-    <include layout="@layout/content_home_page" />
-
+    <include layout="@layout/content_roommate" />
 
 </android.support.design.widget.CoordinatorLayout>

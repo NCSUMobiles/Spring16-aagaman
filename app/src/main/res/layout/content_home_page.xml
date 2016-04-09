@@ -9,7 +9,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    android:background="#C0C0C0"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.vamsivikash.arrival.HomePage"
     tools:showIn="@layout/activity_home_page">
@@ -58,7 +57,7 @@
             <Button
                 android:id="@+id/roomBtn"
 
-                android:text="Roommate Finder"
+                android:text="Match Roommate"
                 android:textColor="#FFFDED"
                 android:textSize="15sp"
 
@@ -68,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/flightstyle"
                 android:shadowColor="#A8A8A8"
+                android:onClick="Roommate"
                 android:shadowDx="0"
                 android:shadowDy="0"
                 android:shadowRadius="10"
@@ -103,5 +103,39 @@
                 android:padding="3dp" />
         </TableRow>
 
+        <TableRow>
+            <Button
+                android:id="@+id/flight_Updates"
+                android:text="Flight Updates"
+                android:textColor="#FFFDED"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/flightstyle"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:onClick="flightUpdates"
+                android:shadowDy="0"
+                android:shadowRadius="10"
+                />
+
+            <TextView
+                android:text=" "
+                android:gravity="right"
+                android:padding="3dp" />
+
+            <TextView
+                android:text=" "
+                android:gravity="right"
+                android:padding="3dp" />
+        </TableRow>
+
     </TableLayout>
 </LinearLayout>
+
+
+
+
+

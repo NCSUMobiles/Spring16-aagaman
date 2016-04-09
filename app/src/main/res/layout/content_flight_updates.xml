@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="gopackdev.arrival.FlightUpdates"
+    tools:showIn="@layout/activity_flight_updates">
+<TableLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <TextView
+        android:text="FRIENDS TRAVELLING ON THE SAME FLIGHT"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:padding="5dp" />
+
+
+    <TableRow>
+
+        <TextView
+            android:text="NAME"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:text="EMAIL"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:text="PHONE"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"
+            />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Harry Potter"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:padding="3dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:text="harry@wizards.com"
+            android:gravity="left"
+            android:padding="3dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:text="9195919191"
+            android:gravity="left"
+            android:padding="3dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"/>
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="James Bond"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:padding="3dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:text="bond@spectre.com"
+            android:gravity="left"
+            android:padding="3dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:text="9191007007"
+            android:gravity="left"
+            android:padding="3dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"/>
+
+    </TableRow>
+</TableLayout>
+
+</LinearLayout>

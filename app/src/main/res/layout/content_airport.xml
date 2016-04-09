@@ -9,7 +9,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:background="#C0C0C0"
     tools:context="com.example.vamsivikash.arrival.Airport"
     tools:showIn="@layout/activity_airport">
 
@@ -20,11 +19,12 @@
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="10dp"
             android:stretchColumns="1">
             <TableRow>
                 <TextView
                     android:text="Enter Pickup Information "
-                    android:textSize="14dp"
+                    android:textSize="20dp"
                     android:layout_gravity="center"
                     android:textColor="#FFF"
                     android:layout_span="3"
@@ -33,9 +33,8 @@
             <TableRow>
                 <TextView
                     android:text="Flight Number"
-                    android:textSize= "14dp"
-                    android:textColor="#FFF"
-                    android:padding="3dp" />
+                    android:textSize= "20dp"
+                    android:textColor="#FFF" />
 
                 <EditText
                     android:id="@+id/flight_no"
@@ -49,15 +48,16 @@
             <TableRow>
                 <TextView
                     android:text="Date"
-                    android:textSize= "14dp"
+                    android:textSize= "20dp"
                     android:textColor="#FFF"
                     android:padding="3dp" />
 
                 <EditText
                     android:id="@+id/flight_date"
-                    android:layout_width="fill_parent"
-                    android:layout_span = "2"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_span = "2"
+                    android:textSize="14dp"
                     android:hint="Enter Arrival Date"/>
             </TableRow>
 
@@ -72,9 +72,8 @@
                     android:id="@+id/dest_arr_time"
                     android:layout_span = "2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-
+                    android:layout_height="wrap_content"
+                    />
 
             </TableRow>
 
