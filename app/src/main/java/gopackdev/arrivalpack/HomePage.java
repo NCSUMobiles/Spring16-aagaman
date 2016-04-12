@@ -25,13 +25,13 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void flightUpdates(View v){
-        Intent intent = new Intent(this,FlightUpdates.class);
+        Intent intent = new Intent(HomePage.this,FlightUpdates.class);
         startActivity(intent);
     }
 
     public void Roommate(View v){
-        Intent intent = new Intent(this,Roommate.class);
-        startActivity(intent);
+        Intent intent1 = new Intent(HomePage.this,Roommate.class);
+        startActivity(intent1);
     }
 
 }

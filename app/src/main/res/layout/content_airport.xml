@@ -64,7 +64,7 @@
             <TableRow>
                 <TextView
                     android:text="Arrival Time"
-                    android:textSize= "14dp"
+                    android:textSize= "20dp"
                     android:textColor="#FFF"
                     android:padding="3dp" />
 

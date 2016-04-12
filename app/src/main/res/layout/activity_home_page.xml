@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="#708090"
     tools:context="gopackdev.arrival.HomePage">
 
     <include layout="@layout/content_home_page" />

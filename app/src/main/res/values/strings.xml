@@ -7,8 +7,8 @@
     <string name="action_settings">Settings</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_email">Email (Required)</string>
+    <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -34,5 +34,69 @@
 
     <string name="college_title">Choose your college</string>
     <string name="title_activity_airport">Airport</string>
+
+    <string-array name="language_list">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Hindi</item>
+        <item>French</item>
+        <item>Urdu</item>
+    </string-array>
+    <string name="language_title">Enter your language preference</string>
+
+    <string-array name="nationality_list">
+        <item>American</item>
+        <item>Chinese</item>
+        <item>Indian</item>
+        <item>French</item>
+        <item>Middle-East</item>
+    </string-array>
+
+    <string name="nationality_title">Choose your nationality</string>
+
+    <string-array name="diet_list">
+        <item>None</item>
+        <item>Vegeterian</item>
+        <item>Non-Vegeterian</item>
+        <item>Lactophobic</item>
+    </string-array>
+
+    <string name="diet_title">Choose your diet</string>
+
+    <string-array name="major_list">
+        <item>Computer Science</item>
+        <item>Electrical Engineering</item>
+        <item>Computer Engineering</item>
+        <item>Computer Networks</item>
+        <item></item>
+    </string-array>
+
+    <string name="major_title">Enter your major subject</string>
+
+    <string-array name="fun_list">
+        <item>Kayaking</item>
+        <item>Hiking</item>
+        <item>Online Gaming</item>
+        <item>Defy Gravity</item>
+        <item>Fishing</item>
+        <item>Jet Skiing</item>
+        <item>Scuba Diving</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="fun_title">Something you want to try for fun</string>
+
+    <string-array name="concern_list">
+        <item>Grades</item>
+        <item>Studying</item>
+        <item>Silence</item>
+        <item>Parties</item>
+        <item>Competitions</item>
+        <item>Hackathons</item>
+        <item>Other</item>
+        <item>Nothing</item>
+    </string-array>
+
+    <string name="concern_title">Most concerned about</string>
 
 </resources>

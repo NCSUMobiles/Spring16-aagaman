@@ -12,6 +12,285 @@
     tools:context="gopackdev.arrival.Roommate"
     tools:showIn="@layout/activity_roommate">
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="First Name"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/firstName"
+                android:layout_span="2"
+                android:layout_centerHorizontal="true" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Last Name"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/lastName"
+                android:layout_span="2"
+                android:layout_centerHorizontal="true" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Gender"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_below="@+id/editText6"
+                android:layout_centerHorizontal="true"/>
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:id="@+id/gender">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:id="@+id/radioButton"
+                    android:checked="false"
+                    android:textSize="14dp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:id="@+id/radioButton2"
+                    android:checked="false"
+                    android:textSize="14dp"/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Language"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_below="@+id/language"
+                android:layout_centerHorizontal="true"/>
+
+            <Spinner
+                android:id="@+id/language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:padding="10dp"
+                android:layout_span="2"
+                android:entries="@array/language_list"
+                android:prompt="@string/language_title" />
+        </TableRow>
 
 
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Nationality"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Spinner
+                android:id="@+id/nationality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:padding="10dp"
+                android:layout_span="2"
+                android:entries="@array/nationality_list"
+                android:prompt="@string/nationality_title" />
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Diet"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Spinner
+                android:id="@+id/diet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:padding="10dp"
+                android:layout_span="2"
+                android:entries="@array/diet_list"
+                android:prompt="@string/diet_title" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Major"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Spinner
+                android:id="@+id/major"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:padding="10dp"
+                android:layout_span="2"
+                android:entries="@array/major_list"
+                android:prompt="@string/major_title" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Concern"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Spinner
+                android:id="@+id/cocern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:padding="10dp"
+                android:layout_span="2"
+                android:entries="@array/concern_list"
+                android:prompt="@string/concern_title" />
+        </TableRow>
+
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Fun love"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Spinner
+                android:id="@+id/funTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:padding="10dp"
+                android:layout_span="2"
+                android:entries="@array/fun_list"
+                android:prompt="@string/fun_title" />
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Sleep Time"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/sleepTime"
+                android:layout_span="2"
+                android:layout_centerHorizontal="true" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Wake Up Time"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/wakeTime"
+                android:layout_span="2"
+                android:layout_centerHorizontal="true" />
+        </TableRow>
+
+    </TableLayout>
+    </ScrollView>
 </LinearLayout>
