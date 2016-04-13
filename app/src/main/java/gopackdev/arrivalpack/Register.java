@@ -68,7 +68,7 @@ public class Register extends AppCompatActivity {
                 StudentConnector connector = new StudentConnector(client);
                 connector.addStudentToCloudant(bean, getApplicationContext());
 
-                closeAcitvity();
+                //loseAcitvity();
             }
         });
     }

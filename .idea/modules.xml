@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Arrival_Pack.iml" filepath="$PROJECT_DIR$/Arrival_Pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArrivalPack.iml" filepath="$PROJECT_DIR$/ArrivalPack.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/slider/slider.iml" filepath="$PROJECT_DIR$/slider/slider.iml" />
     </modules>

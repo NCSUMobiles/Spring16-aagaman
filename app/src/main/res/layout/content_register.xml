@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
 
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:stretchColumns="1"
         android:layout_marginTop="100dp">
 
@@ -121,16 +121,164 @@
         </TableRow>
 
         <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="First Name"
+                android:id="@+id/firstName"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/editFirstName"
+                android:layout_span="2"
+                android:layout_below="@+id/firstName"
+                android:layout_centerHorizontal="true" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="First Name"
+                android:id="@+id/lastName"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/editLastName"
+                android:layout_span="2"
+                android:layout_below="@+id/lastName"
+                android:layout_centerHorizontal="true" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="First Language"
+                android:id="@+id/firstLanguage"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/editFirstLanguage"
+                android:layout_span="2"
+                android:layout_below="@+id/firstLanguage"
+                android:layout_centerHorizontal="true" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Nationality"
+                android:id="@+id/nationality"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/editNationality"
+                android:layout_span="2"
+                android:layout_below="@+id/nationality"
+                android:layout_centerHorizontal="true" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Dietary Restriction"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/dietary_restriction"
+                android:layout_below="@+id/nationality"
+                android:layout_centerHorizontal="true"/>
+
+            <Spinner
+                android:id="@+id/dietary_restrictionDropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:padding="10dp"
+                android:layout_span="2"
+                android:entries="@array/diet_list"
+                android:prompt="@string/diet_title" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Nationality"
+                android:id="@+id/interest_expertise"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:id="@+id/edit_interest_expertise"
+                android:layout_span="2"
+                android:layout_below="@+id/dietary_restriction"
+                android:layout_centerHorizontal="true" />
+        </TableRow>
+        <TableRow>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Submit"
                 android:id="@+id/submitSignUp"
                 android:padding="10dp"
-                android:layout_below="@+id/register"
+                android:layout_below="@+id/edit_interest_expertise"
                 android:layout_span="3"
                 android:layout_centerHorizontal="true" />
         </TableRow>
-
     </TableLayout>
 </ScrollView>

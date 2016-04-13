@@ -1,6 +1,8 @@
 package gopackdev.arrivalpack.bluemix;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -16,6 +18,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import gopackdev.arrivalpack.MainActivity;
 import gopackdev.arrivalpack.bluemixbean.StudentBean;
 
 /**
@@ -50,8 +53,13 @@ public class StudentConnector {
             @Override
             public void onSuccess(Response response) {
                 Log.i("StudentConnector", "Student created successfully");
-                Toast.makeText(context, "Account Created!", Toast.LENGTH_LONG).show();
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(context, "Account Created!", Toast.LENGTH_LONG).show();
 
+                    }
+                });
             }
 
             // On failure, log errors
@@ -66,7 +74,12 @@ public class StudentConnector {
                 if (extendedInfo != null) {
                     Log.e("StudentConnector", "createStudent failed with error: " + extendedInfo.toString());
                 }
-                Toast.makeText(context, "Account Failed To Create!",Toast.LENGTH_LONG).show();
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(context, "Account Failed To Create!",Toast.LENGTH_LONG).show();
+                    }
+                });
             }
         });
     }
