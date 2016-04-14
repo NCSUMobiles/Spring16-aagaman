@@ -12,6 +12,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.core.api.Response;
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.ResponseListener;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -50,39 +51,91 @@ public class StudentConnector {
         addStudentResult = false;
         Log.i("Student Connector",json);
         request.send(ctx, json, rl);
-//        request.send(ctx, json, new ResponseListener() {
-//            // On success, update local list with new TodoItem
-//            @Override
-//            public void onSuccess(Response response) {
-//                Log.i("StudentConnector", "Student created successfully");
-//                new Handler(Looper.getMainLooper()).post(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        Toast.makeText(context, "Account Created!", Toast.LENGTH_LONG).show();
-//
-//                    }
-//                });
-//            }
-//
-//            // On failure, log errors
-//            @Override
-//            public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
-//                if (response != null) {
-//                    Log.e("StudentConnector", "createStudent failed with error: " + response.getResponseText());
-//                }
-//                if (t != null) {
-//                    Log.e("StudentConnector", "createStudent failed with error: " + t.getLocalizedMessage(), t);
-//                }
-//                if (extendedInfo != null) {
-//                    Log.e("StudentConnector", "createStudent failed with error: " + extendedInfo.toString());
-//                }
-//                new Handler(Looper.getMainLooper()).post(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        Toast.makeText(context, "Account Failed To Create!",Toast.LENGTH_LONG).show();
-//                    }
-//                });
-//            }
-//        });
     }
+
+    /**
+     * Login method
+     * Should only get one value (studnet id)
+     * @param ctx
+     * @param username
+     * @param password
+     */
+    public void authenticateStudent(Context ctx, String username, String password, ResponseListener rl){
+        Request request = new Request(client.getBluemixAppRoute() + subURL +"/authenticateUser", Request.GET);
+        JSONObject credential = new JSONObject();
+        try {
+            credential.put("username", username);
+            credential.put("password", password);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        context = ctx;
+        HashMap headers = new HashMap();
+        List<String> cType = new ArrayList<>();
+        cType.add("application/json");
+        List<String> accept = new ArrayList<>();
+        accept.add("Application/json");
+
+        headers.put("Content-Type", cType);
+        headers.put("Accept", accept);
+
+        request.setHeaders(headers);
+        addStudentResult = false;
+        Log.i("Student Connector","authenticate user");
+        request.send(ctx, credential.toString(), rl);
+    }
+    /**
+     * You will need to retrieve the student JSON datra in ResponseListerner rl from the caller.
+     * @param ctx
+     * @param id
+     * @param rl
+     * @return
+     */
+    public void getStudentByID(Context ctx, String id, ResponseListener rl){
+        Request request = new Request(client.getBluemixAppRoute() + subURL +"/"+id, Request.GET);
+        JSONObject studentJSON = new JSONObject();
+        context = ctx;
+        HashMap headers = new HashMap();
+        List<String> cType = new ArrayList<>();
+        cType.add("application/json");
+        List<String> accept = new ArrayList<>();
+        accept.add("Application/json");
+
+        headers.put("Content-Type", cType);
+        headers.put("Accept", accept);
+
+        request.setHeaders(headers);
+        addStudentResult = false;
+        Log.i("Student Connector","get studentByID");
+        request.send(ctx, rl);
+    }
+
+    /**
+     * Get school by ID, also need to retreive the stduentJSON from ResponseListerner rl from caller
+     * @param ctx
+     * @param schoolID  (if -1, it will get all Students JSON)
+     * @param rl
+     */
+    public void getStudentsBySchool(Context ctx, long schoolID, ResponseListener rl){
+        Request request = new Request(client.getBluemixAppRoute() + subURL +
+                "/getStudentBySchoolID?school_id="+schoolID, Request.GET);
+        JSONObject studentJSON = new JSONObject();
+        context = ctx;
+        HashMap headers = new HashMap();
+        List<String> cType = new ArrayList<>();
+        cType.add("application/json");
+        List<String> accept = new ArrayList<>();
+        accept.add("Application/json");
+
+        headers.put("Content-Type", cType);
+        headers.put("Accept", accept);
+
+        request.setHeaders(headers);
+        addStudentResult = false;
+        Log.i("Student Connector","get studentBySchool");
+        request.send(ctx, rl);
+    }
+
+
+
 }

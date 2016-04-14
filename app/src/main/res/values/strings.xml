@@ -5,7 +5,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-
+    <!-- SharedPrefernce-->
+    <!-- for now caching only studnet db ID-->
+    <string name="login_token">LoginToken</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email (Required)</string>
     <string name="prompt_password">Password</string>
