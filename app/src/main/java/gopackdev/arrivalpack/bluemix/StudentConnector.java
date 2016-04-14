@@ -33,7 +33,7 @@ public class StudentConnector {
         this.client = c;
     }
     private Context context;
-    public void addStudentToCloudant(StudentBean bean, Context ctx){
+    public void addStudentToCloudant(StudentBean bean, Context ctx, ResponseListener rl){
         Request request = new Request(client.getBluemixAppRoute() + subURL, Request.POST);
         String json = bean.JSONFormat();
         context = ctx;
@@ -48,39 +48,41 @@ public class StudentConnector {
 
         request.setHeaders(headers);
         addStudentResult = false;
-        request.send(ctx, json, new ResponseListener() {
-            // On success, update local list with new TodoItem
-            @Override
-            public void onSuccess(Response response) {
-                Log.i("StudentConnector", "Student created successfully");
-                new Handler(Looper.getMainLooper()).post(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(context, "Account Created!", Toast.LENGTH_LONG).show();
-
-                    }
-                });
-            }
-
-            // On failure, log errors
-            @Override
-            public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
-                if (response != null) {
-                    Log.e("StudentConnector", "createStudent failed with error: " + response.getResponseText());
-                }
-                if (t != null) {
-                    Log.e("StudentConnector", "createStudent failed with error: " + t.getLocalizedMessage(), t);
-                }
-                if (extendedInfo != null) {
-                    Log.e("StudentConnector", "createStudent failed with error: " + extendedInfo.toString());
-                }
-                new Handler(Looper.getMainLooper()).post(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(context, "Account Failed To Create!",Toast.LENGTH_LONG).show();
-                    }
-                });
-            }
-        });
+        Log.i("Student Connector",json);
+        request.send(ctx, json, rl);
+//        request.send(ctx, json, new ResponseListener() {
+//            // On success, update local list with new TodoItem
+//            @Override
+//            public void onSuccess(Response response) {
+//                Log.i("StudentConnector", "Student created successfully");
+//                new Handler(Looper.getMainLooper()).post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        Toast.makeText(context, "Account Created!", Toast.LENGTH_LONG).show();
+//
+//                    }
+//                });
+//            }
+//
+//            // On failure, log errors
+//            @Override
+//            public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
+//                if (response != null) {
+//                    Log.e("StudentConnector", "createStudent failed with error: " + response.getResponseText());
+//                }
+//                if (t != null) {
+//                    Log.e("StudentConnector", "createStudent failed with error: " + t.getLocalizedMessage(), t);
+//                }
+//                if (extendedInfo != null) {
+//                    Log.e("StudentConnector", "createStudent failed with error: " + extendedInfo.toString());
+//                }
+//                new Handler(Looper.getMainLooper()).post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        Toast.makeText(context, "Account Failed To Create!",Toast.LENGTH_LONG).show();
+//                    }
+//                });
+//            }
+//        });
     }
 }

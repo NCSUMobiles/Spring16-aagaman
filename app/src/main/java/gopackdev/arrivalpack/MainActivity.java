@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity
 
     public void register(View view)
     {
-        Intent myIntent = new Intent(MainActivity.this, Register.class);
+        Intent myIntent = new Intent(MainActivity.this, NewAcctScrollingActivity.class);
         //myIntent.putExtra("key", value); //Optional parameters
         startActivity(myIntent);
     }

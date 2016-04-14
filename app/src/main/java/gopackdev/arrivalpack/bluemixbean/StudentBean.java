@@ -4,6 +4,7 @@ import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.JSONStringer;
 
 /**
  * Created by Chi-Han on 3/30/2016.
@@ -25,7 +26,7 @@ public class StudentBean {
     String id;
     int sleepTime = 0;
     int wakeupTime = 0;
-
+    long schoolID = 0;
     /**
      * Constructor
      *
@@ -45,7 +46,7 @@ public class StudentBean {
      * @param sleepTime
      * @param wakeupTime
      */
-    public StudentBean(String schoolEmail, String passWord,
+    public StudentBean(String schoolEmail, String passWord, long schoolID,
                        String firstName, String lastName, String gender,
                        String firstLanguage, String nationality, String dietaryRestriction,
                        String interestExpertise, String clubParticipated, String favoriteClass,
@@ -66,12 +67,14 @@ public class StudentBean {
         this.somethingWantToTryInFuture = somethingWantToTryInFuture;
         this.sleepTime = sleepTime;
         this.wakeupTime = wakeupTime;
+        this.schoolID = schoolID;
     }
 
     public StudentBean(JSONObject json){
         try {
             this.schoolEmail = json.getString("school_email");
             this.passWord = json.getString("password");
+            this.schoolID = json.getLong("school_id");
             this.firstName = json.getString("first_name");
             this.lastName = json.getString("last_name");
             this.gender = json.getString("gender");
@@ -94,24 +97,49 @@ public class StudentBean {
      * @return
      */
     public String JSONFormat(){
-        String json = "{" +
-                "  \"school_email\": \""+this.schoolEmail+"\"," +
-                "  \"password\": \""+this.passWord+"\"," +
-                "  \"first_name\": \""+this.firstName+"\"," +
-                "  \"last_name\": \""+this.lastName+"\"," +
-                "  \"gender\": \""+this.gender+"\"," +
-                "  \"first_language\": \""+this.firstLanguage+"\"," +
-                "  \"nationality\": \""+this.nationality+"\"," +
-                "  \"dietary_restriction:\": \""+this.dietaryRestriction+"\"," +
-                "  \"interest_expertise\": \""+this.interestExpertise+"\"," +
-                "  \"club_participated\": \""+this.clubParticipated+"\"," +
-                "  \"favorite_class\": \""+this.favoriteClass+"\"," +
-                "  \"recent_concern\": \""+this.recentConcern+"\"," +
-                "  \"something_want_to_try_in_future\": \""+this.somethingWantToTryInFuture+"\"," +
-                "  \"sleep_time\": 0," +
-                "  \"wakeup_time\": 0" +
-                "}";
-        return json;
+//        String json = "{" +
+//                "  \"school_email\": \""+this.schoolEmail+"\"," +
+//                " \"school_id\": \""+this.schoolID+"\","+
+//                "  \"password\": \""+this.passWord+"\"," +
+//                "  \"first_name\": \""+this.firstName+"\"," +
+//                "  \"last_name\": \""+this.lastName+"\"," +
+//                "  \"gender\": \""+this.gender+"\"," +
+//                "  \"first_language\": \""+this.firstLanguage+"\"," +
+//                "  \"nationality\": \""+this.nationality+"\"," +
+//                "  \"dietary_restriction:\": \""+this.dietaryRestriction+"\"," +
+//                "  \"interest_expertise\": \""+this.interestExpertise+"\"," +
+//                "  \"club_participated\": \""+this.clubParticipated+"\"," +
+//                "  \"favorite_class\": \""+this.favoriteClass+"\"," +
+//                "  \"recent_concern\": \""+this.recentConcern+"\"," +
+//                "  \"something_want_to_try_in_future\": \""+this.somethingWantToTryInFuture+"\"," +
+//                "  \"sleep_time\": 0," +
+//                "  \"wakeup_time\": 0" +
+//                "}";
+        JSONObject obj = new JSONObject();
+        try {
+            obj.put("school_email",this.schoolEmail);
+            obj.put("school_id",this.schoolID);
+            obj.put("password",this.passWord);
+            obj.put("first_name",this.firstName);
+            obj.put("last_name",this.lastName);
+            obj.put("gender",this.gender);
+            obj.put("first_language",this.firstLanguage);
+            obj.put("nationality",this.nationality);
+            obj.put("dietary_restriction",this.dietaryRestriction);
+            obj.put("interest_expertise",this.interestExpertise);
+            obj.put("club_participated",this.clubParticipated);
+            obj.put("favorite_class",this.favoriteClass);
+            obj.put("recent_concern",this.recentConcern);
+            obj.put("something_want_to_try_in_future",this.somethingWantToTryInFuture);
+            obj.put("sleep_time",this.sleepTime);
+            obj.put("wakeup_time",this.wakeupTime);
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return obj.toString();
+
     }
 
     public void setID(String id){
