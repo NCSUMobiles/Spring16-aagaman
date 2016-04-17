@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The 'over complicated' school name id map! -->
+    <string-array name="college_names">
+        <item>North Carolina State University</item>
+        <item>University of South California</item>
+        <item>Carnegie Mellon</item>
+        <item>University of California, Berkeley</item>
+        <item>Duke University</item>
+        <item>Yale University</item>
+        <item>University of Notre Dame</item>
+        <item>University of Washington</item>
+        <item>University of North Carolina Chapel Hill</item>
+        <item>University of North Carolina Charlotte</item>
+        <item>University of North Carolina Greensboro</item>
+    </string-array>
+
+    <integer-array name="college_code">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </integer-array>
+</resources>
