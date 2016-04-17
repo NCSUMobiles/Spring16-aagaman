@@ -7,11 +7,12 @@
     <string name="action_settings">Settings</string>
     <!-- SharedPrefernce-->
     <!-- for now caching only studnet db ID-->
+    <string name="login_cache">LoginCache</string>
     <string name="login_token">LoginToken</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email (Required)</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in">Sign in</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
@@ -23,16 +24,6 @@
     <string name="title_activity_register">Register</string>
     <string name="title_activity_home_page">HomePage</string>
 
-    <string-array name="college_list">
-        <item>North Carolina State University</item>
-        <item>University of South California</item>
-        <item>Carnegie Mellon</item>
-        <item>University of California, Berkeley</item>
-        <item>Duke University</item>
-        <item>Yale University</item>
-        <item>University of Notre Dame</item>
-        <item>University of Washington</item>
-    </string-array>
 
     <string name="college_title">Choose your college</string>
     <string name="title_activity_airport">Airport</string>
@@ -190,5 +181,6 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="title_activity_login">Sign in</string>
 
 </resources>

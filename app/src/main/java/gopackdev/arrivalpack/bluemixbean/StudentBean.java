@@ -26,7 +26,7 @@ public class StudentBean {
     String id;
     int sleepTime = 0;
     int wakeupTime = 0;
-    long schoolID = 0;
+    int schoolID = 0;
     /**
      * Constructor
      *
@@ -46,7 +46,7 @@ public class StudentBean {
      * @param sleepTime
      * @param wakeupTime
      */
-    public StudentBean(String schoolEmail, String passWord, long schoolID,
+    public StudentBean(String schoolEmail, String passWord, int schoolID,
                        String firstName, String lastName, String gender,
                        String firstLanguage, String nationality, String dietaryRestriction,
                        String interestExpertise, String clubParticipated, String favoriteClass,
@@ -74,7 +74,7 @@ public class StudentBean {
         try {
             this.schoolEmail = json.getString("school_email");
             this.passWord = json.getString("password");
-            this.schoolID = json.getLong("school_id");
+            this.schoolID = json.getInt("school_id");
             this.firstName = json.getString("first_name");
             this.lastName = json.getString("last_name");
             this.gender = json.getString("gender");

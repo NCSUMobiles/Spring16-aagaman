@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -59,6 +60,7 @@ public class NewAcctScrollingActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Button submitBtn = (Button) findViewById(R.id.submitSignUp);
+        assert submitBtn != null;
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,14 +92,24 @@ public class NewAcctScrollingActivity extends AppCompatActivity {
                 String favorClassStr = favor_class.getText().toString();
                 String concernStr = concern.getText().toString();
                 String somethingStr = something.getText().toString();
-                long shoolID = school_id.getSelectedItemId();
+                TimePicker sleepPicker = (TimePicker) findViewById(R.id.sleepTime);
+                TimePicker wakePicker = (TimePicker) findViewById(R.id.wakeTime);
+                int sleepHour = sleepPicker.getCurrentHour();
+                int sleepMin = sleepPicker.getCurrentMinute();
+                int sleepTime = sleepHour*100 + sleepMin;
+                int wakeHour = wakePicker.getCurrentHour();
+                int wakeMin = wakePicker.getCurrentMinute();
+                int wakeTime = wakeHour*100 + wakeMin;
+                int shoolID_position = school_id.getSelectedItemPosition();
+                int[] schoolID_list = getResources().getIntArray(R.array.college_code);
+                int schoolID = schoolID_list[shoolID_position];
                 String dietRestrictionStr = diet_restriction.getSelectedItem().toString();
                 StudentBean bean = new StudentBean(username, password,
-                        shoolID, firstNameString, lastNameString, gender,
+                        schoolID, firstNameString, lastNameString, gender,
                         languateStr, nationalityStr, dietRestrictionStr,
                         interestStr, clubStr, favorClassStr,
                         concernStr, somethingStr,
-                        2300, 800);
+                        sleepTime, wakeTime);
 
                 StudentConnector connector = new StudentConnector(client);
                 connector.addStudentToCloudant(bean, getApplicationContext(), new ResponseListener() {

@@ -92,12 +92,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="University*"
                 android:padding="10dp"
                 android:textSize="14dp"
+                android:layout_weight="1"
                 android:id="@+id/university"
                 android:layout_centerHorizontal="true"/>
 
@@ -105,10 +106,12 @@
                 android:id="@+id/universityDropDown"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:spinnerMode="dropdown"
+                android:spinnerMode="dialog"
                 android:padding="10dp"
-                android:layout_span="2"
-                android:entries="@array/college_list"
+                android:layout_weight="1"
+                android:layout_span="3"
+                android:entries="@array/college_names"
+                android:entryValues="@array/college_code"
                 android:prompt="@string/college_title" />
         </TableRow>
 

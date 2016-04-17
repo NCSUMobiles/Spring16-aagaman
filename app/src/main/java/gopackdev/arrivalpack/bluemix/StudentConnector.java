@@ -61,10 +61,10 @@ public class StudentConnector {
      * @param password
      */
     public void authenticateStudent(Context ctx, String username, String password, ResponseListener rl){
-        Request request = new Request(client.getBluemixAppRoute() + subURL +"/authenticateUser", Request.GET);
+        Request request = new Request(client.getBluemixAppRoute() + subURL +"authenticateUser", Request.POST);
         JSONObject credential = new JSONObject();
         try {
-            credential.put("username", username);
+            credential.put("school_email", username);
             credential.put("password", password);
         } catch (JSONException e) {
             e.printStackTrace();
