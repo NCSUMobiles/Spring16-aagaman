@@ -82,7 +82,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        alreadyLogin();
+        if(alreadyLogin()){
+            correctCredential();
+        };
 
         // initialize BMSClient for bluemix
         client = BMSClient.getInstance();
@@ -129,7 +131,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         if(student_code == null){
             Toast.makeText(this,"null studnet_code", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(this,student_code, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Already logged in!", Toast.LENGTH_SHORT).show();
         }
         return true;
     }
@@ -151,7 +153,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 try {
                     JSONObject obTmp = new JSONObject(response.getResponseText());
                     getSharedPreferences(getString(R.string.login_cache),MODE_PRIVATE)
-                            .edit().putString(getString(R.string.login_token), obTmp.getString("id"));
+                            .edit().putString(getString(R.string.login_token), obTmp.getString("id")).apply();
                     Log.i("login action",obTmp.getString("id")+"recorded.");
                     correctCredential();
                 } catch (JSONException e) {
