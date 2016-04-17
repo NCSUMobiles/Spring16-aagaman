@@ -1,3 +1,4 @@
+[
 {
 "school_email":"mtohmaz@ncsu.edu",
 "password":"password1",
@@ -13,8 +14,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":0630
-}
+"wakeup_time":630
+},;
 {
 "school_email":"sesterli@ncsu.edu",
 "password":"password2",
@@ -30,8 +31,8 @@
 "recent_concern":"tuition cost",
 "something_you_want_to_try_for_fun":"skydiving",
 "sleep_time":2225,
-"wakeup_time":0745
-}
+"wakeup_time":745
+},
 {
 "school_email":"nzorn@ncsu.edu",
 "password":"password3",
@@ -47,8 +48,8 @@
 "recent_concern":"finding roommate",
 "something_you_want_to_try_for_fun":"jet skiing",
 "sleep_time":2100,
-"wakeup_time":0700
-}
+"wakeup_time":700
+},
 {
 "school_email":"adevaul@ncsu.edu",
 "password":"password4",
@@ -64,8 +65,8 @@
 "recent_concern":"Robotics Competition",
 "something_you_want_to_try_for_fun":"Scuba Diving",
 "sleep_time":2245,
-"wakeup_time":0816
-}
+"wakeup_time":816
+},
 {
 "school_email":"cwelcher@ncsu.edu",
 "password":"password5",
@@ -82,7 +83,7 @@
 "something_you_want_to_try_for_fun":"Kayaking",
 "sleep_time":2355,
 "wakeup_time":1100
-}
+},
 {
 "school_email":"jcroll@ncsu.edu",
 "password":"password6",
@@ -98,8 +99,8 @@
 "recent_concern":"studying",
 "something_you_want_to_try_for_fun":"Defy Gravity",
 "sleep_time":2310,
-"wakeup_time":0730
-}
+"wakeup_time":730
+},
 {
 "school_email":"agauger@ncsu.edu",
 "password":"password7",
@@ -115,8 +116,8 @@
 "recent_concern":"studying",
 "something_you_want_to_try_for_fun":"spearfishing",
 "sleep_time":2150,
-"wakeup_time":0730
-}
+"wakeup_time":730
+},
 {
 "school_email":"ejune@ncsu.edu",
 "password":"password8",
@@ -132,8 +133,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"Kayaking",
 "sleep_time":2240,
-"wakeup_time":0700
-}
+"wakeup_time":700
+},
 {
 "school_email":"lrawling@ncsu.edu",
 "password":"password9",
@@ -149,8 +150,8 @@
 "recent_concern":"studying",
 "something_you_want_to_try_for_fun":"jet skiing",
 "sleep_time":2150,
-"wakeup_time":0600
-}
+"wakeup_time":600
+},
 {
 "school_email":"ltelford@ncsu.edu",
 "password":"password10",
@@ -166,8 +167,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"snowboarding",
 "sleep_time":2400,
-"wakeup_time":0730
-}
+"wakeup_time":730
+},
 {
 "school_email":"jmurdoch@ncsu.edu",
 "password":"password11",
@@ -183,8 +184,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"Scuba Diving",
 "sleep_time":2300,
-"wakeup_time":0630
-}
+"wakeup_time":630
+},
 {
 "school_email":"malfred@ncsu.edu",
 "password":"password12",
@@ -200,8 +201,8 @@
 "recent_concern":"studying",
 "something_you_want_to_try_for_fun":"snowboarding",
 "sleep_time":2200,
-"wakeup_time":0730
-}
+"wakeup_time":730
+},
 {
 "school_email":"icienfue@ncsu.edu",
 "password":"password13",
@@ -217,8 +218,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"jet skiing",
 "sleep_time":2200,
-"wakeup_time":0630
-}
+"wakeup_time":630
+},
 {
 "school_email":"tperras@ncsu.edu",
 "password":"password14",
@@ -235,7 +236,7 @@
 "something_you_want_to_try_for_fun":"skydiving",
 "sleep_time":2330,
 "wakeup_time":1040
-}
+},
 {
 "school_email":"aburrage@ncsu.edu",
 "password":"password15",
@@ -252,7 +253,7 @@
 "something_you_want_to_try_for_fun":"skiing",
 "sleep_time":2250,
 "wakeup_time":1000
-}
+},
 {
 "school_email":"rhazan@ncsu.edu",
 "password":"password16",
@@ -268,8 +269,8 @@
 "recent_concern":"studying",
 "something_you_want_to_try_for_fun":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":0630
-}
+"wakeup_time":630
+},
 {
 "school_email":"sburrowe@ncsu.edu",
 "password":"password17",
@@ -285,8 +286,8 @@
 "recent_concern":"studying",
 "something_you_want_to_try_for_fun":"sky diving",
 "sleep_time":2300,
-"wakeup_time":0630
-}
+"wakeup_time":630
+},
 {
 "school_email":"jkratzer@ncsu.edu",
 "password":"password18",
@@ -302,8 +303,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"Scuba Diving",
 "sleep_time":2300,
-"wakeup_time":0630
-}
+"wakeup_time":630
+},
 {
 "school_email":"lzeck@ncsu.edu",
 "password":"password19",
@@ -320,7 +321,7 @@
 "something_you_want_to_try_for_fun":"sky diving",
 "sleep_time":2400,
 "wakeup_time":1120
-}
+},
 {
 "school_email":"scapron@ncsu.edu",
 "password":"password20",
@@ -336,8 +337,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"Racing",
 "sleep_time":2250,
-"wakeup_time":0700
-}
+"wakeup_time":700
+},
 {
 "school_email":"avince@ncsu.edu",
 "password":"password21",
@@ -353,8 +354,8 @@
 "recent_concern":"studying",
 "something_you_want_to_try_for_fun":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":0630
-}
+"wakeup_time":630
+},
 {
 "school_email":"alavery@ncsu.edu",
 "password":"password22",
@@ -370,8 +371,8 @@
 "recent_concern":"school",
 "something_you_want_to_try_for_fun":"sky diving",
 "sleep_time":2350,
-"wakeup_time":0730
-}
+"wakeup_time":730
+},
 {
 "school_email":"mdepew@ncsu.edu",
 "password":"password23",
@@ -387,8 +388,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"Scuba Diving",
 "sleep_time":2400,
-"wakeup_time":0730
-}
+"wakeup_time":730
+},
 {
 "school_email":"ddestefa@ncsu.edu",
 "password":"password24",
@@ -404,8 +405,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"sky diving",
 "sleep_time":2200,
-"wakeup_time":0740
-}
+"wakeup_time":740
+},
 {
 "school_email":"lpujol@ncsu.edu",
 "password":"password25",
@@ -421,8 +422,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"Scuba Diving",
 "sleep_time":2340,
-"wakeup_time":0941,
-}
+"wakeup_time":941
+},
 {
 "school_email":"lcomerfo@ncsu.edu",
 "password":"password26",
@@ -438,8 +439,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"go carting",
 "sleep_time":2300,
-"wakeup_time":0630,
-}
+"wakeup_time":630
+},
 {
 "school_email":"cdewalt@ncsu.edu",
 "password":"password27",
@@ -455,8 +456,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":0630,
-}
+"wakeup_time":630
+},
 {
 "school_email":"agatewoo@ncsu.edu",
 "password":"password28",
@@ -472,8 +473,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"parasailing",
 "sleep_time":2300,
-"wakeup_time":0630,
-}
+"wakeup_time":630
+},
 {
 "school_email":"lsiler@ncsu.edu",
 "password":"password29",
@@ -489,8 +490,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"jet skiing",
 "sleep_time":2140,
-"wakeup_time":0730,
-}
+"wakeup_time":730
+},
 {
 "school_email":"cmcaninc@ncsu.edu",
 "password":"password30",
@@ -506,8 +507,8 @@
 "recent_concern":"studying",
 "something_you_want_to_try_for_fun":"sky diving",
 "sleep_time":2300,
-"wakeup_time":0630,
-}
+"wakeup_time":630
+},
 {
 "school_email":"dsinglet@ncsu.edu",
 "password":"password31",
@@ -523,8 +524,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":0730,
-}
+"wakeup_time":730
+},
 {
 "school_email":"pandra@ncsu.edu",
 "password":"password32",
@@ -540,8 +541,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"travelling",
 "sleep_time":2300,
-"wakeup_time":0630,
-}
+"wakeup_time":630
+},
 {
 "school_email":"okhan@ncsu.edu",
 "password":"password33",
@@ -557,8 +558,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"spearfishing",
 "sleep_time":2320,
-"wakeup_time":0730,
-}
+"wakeup_time":730
+},
 {
 "school_email":"kbasak@ncsu.edu",
 "password":"password34",
@@ -574,8 +575,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"spearfishing",
 "sleep_time":2200,
-"wakeup_time":0630,
-}
+"wakeup_time":630
+},
 {
 "school_email":"hyu@ncsu.edu",
 "password":"password35",
@@ -591,8 +592,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"Scuba Diving",
 "sleep_time":2300,
-"wakeup_time":0630,
-}
+"wakeup_time":630
+},
 {
 "school_email":"ayen@ncsu.edu",
 "password":"password36",
@@ -608,8 +609,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"Sailing",
 "sleep_time":2250,
-"wakeup_time":0830,
-}
+"wakeup_time":830
+},
 {
 "school_email":"rkento@ncsu.edu",
 "password":"password37",
@@ -625,8 +626,8 @@
 "recent_concern":"studying",
 "something_you_want_to_try_for_fun":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":0830,
-}
+"wakeup_time":830
+},
 {
 "school_email":"mthomas@ncsu.edu",
 "password":"password38",
@@ -642,8 +643,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"Sailing",
 "sleep_time":2300,
-"wakeup_time":0630,
-}
+"wakeup_time":630
+},
 {
 "school_email":"jwinston@ncsu.edu",
 "password":"password39",
@@ -659,8 +660,8 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"go carting",
 "sleep_time":2400,
-"wakeup_time":0600,
-}
+"wakeup_time":600
+},
 {
 "school_email":"emarcus@ncsu.edu",
 "password":"password40",
@@ -676,5 +677,6 @@
 "recent_concern":"grades",
 "something_you_want_to_try_for_fun":"go carting",
 "sleep_time":2100,
-"wakeup_time":0600,
+"wakeup_time":600
 }
+]
