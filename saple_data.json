@@ -1,6 +1,8 @@
 [
 {
 "school_email":"mtohmaz@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password1",
 "first_name":"Mahmoud",
 "last_name":"Tohmaz",
@@ -17,7 +19,9 @@
 "wakeup_time":630
 },
 {
-"school_email":"sesterli@ncsu.edu",
+"school_email":"sesterli@usc.edu",
+"college_name":"University Of South California",
+"college_code":2,
 "password":"password2",
 "first_name":"Sherman",
 "last_name":"Esterline",
@@ -35,6 +39,8 @@
 },
 {
 "school_email":"nzorn@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password3",
 "first_name":"Nedra",
 "last_name":"Zorn",
@@ -51,7 +57,9 @@
 "wakeup_time":700
 },
 {
-"school_email":"adevaul@ncsu.edu",
+"school_email":"adevaul@cmu.edu",
+"college_name":"Carnegie Mellon University",
+"college_code":3,
 "password":"password4",
 "first_name":"Angila",
 "last_name":"Devaul",
@@ -69,6 +77,8 @@
 },
 {
 "school_email":"cwelcher@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password5",
 "first_name":"Ciera",
 "last_name":"Welcher",
@@ -86,6 +96,8 @@
 },
 {
 "school_email":"jcroll@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password6",
 "first_name":"Janis",
 "last_name":"Croll",
@@ -102,7 +114,9 @@
 "wakeup_time":730
 },
 {
-"school_email":"agauger@ncsu.edu",
+"school_email":"agauger@berkeley.edu",
+"college_name":"University of South California at Berkeley",
+"college_code":4,
 "password":"password7",
 "first_name":"Aldo",
 "last_name":"Gauger",
@@ -120,6 +134,8 @@
 },
 {
 "school_email":"ejune@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password8",
 "first_name":"Everette",
 "last_name":"June",
@@ -137,6 +153,8 @@
 },
 {
 "school_email":"lrawling@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password9",
 "first_name":"Laurel",
 "last_name":"Rawlings",
@@ -154,6 +172,8 @@
 },
 {
 "school_email":"ltelford@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password10",
 "first_name":"Lavona",
 "last_name":"Telford",
@@ -170,7 +190,9 @@
 "wakeup_time":730
 },
 {
-"school_email":"jmurdoch@ncsu.edu",
+"school_email":"jmurdoch@duke.edu",
+"college_name":"Duke University",
+"college_code":5,
 "password":"password11",
 "first_name":"Joel",
 "last_name":"Murdoch",
@@ -188,6 +210,8 @@
 },
 {
 "school_email":"malfred@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password12",
 "first_name":"Marceline",
 "last_name":"Alfred",
@@ -205,6 +229,8 @@
 },
 {
 "school_email":"icienfue@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password13",
 "first_name":"Irina",
 "last_name":"Cienfuegos",
@@ -221,7 +247,9 @@
 "wakeup_time":630
 },
 {
-"school_email":"tperras@ncsu.edu",
+"school_email":"tperras@yale.edu",
+"college_name":"Yale University",
+"college_code":6,
 "password":"password14",
 "first_name":"Tamatha",
 "last_name":"Perras",
@@ -239,6 +267,8 @@
 },
 {
 "school_email":"aburrage@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password15",
 "first_name":"Abbie",
 "last_name":"Burrage",
@@ -255,7 +285,9 @@
 "wakeup_time":1000
 },
 {
-"school_email":"rhazan@ncsu.edu",
+"school_email":"rhazan@nd.edu",
+"college_name":"University of Notre Dame",
+"college_code":7,
 "password":"password16",
 "first_name":"Roxana",
 "last_name":"Hazan",
@@ -272,7 +304,9 @@
 "wakeup_time":630
 },
 {
-"school_email":"sburrowe@ncsu.edu",
+"school_email":"sburrowe@uw.edu",
+"college_name":"University of Washington",
+"college_code":8,
 "password":"password17",
 "first_name":"Santa",
 "last_name":"Burrowes",
@@ -290,6 +324,8 @@
 },
 {
 "school_email":"jkratzer@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password18",
 "first_name":"Jayna",
 "last_name":"Kratzer",
@@ -307,6 +343,8 @@
 },
 {
 "school_email":"lzeck@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password19",
 "first_name":"Lia",
 "last_name":"Zeck",
@@ -323,7 +361,9 @@
 "wakeup_time":1120
 },
 {
-"school_email":"scapron@ncsu.edu",
+"school_email":"scapron@unc.edu",
+"college_name":"University of North Carolina at Chapel Hill",
+"college_code":9,
 "password":"password20",
 "first_name":"Shanon",
 "last_name":"Capron",
@@ -341,6 +381,8 @@
 },
 {
 "school_email":"avince@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password21",
 "first_name":"Aileen",
 "last_name":"Vince",
@@ -357,7 +399,9 @@
 "wakeup_time":630
 },
 {
-"school_email":"alavery@ncsu.edu",
+"school_email":"alavery@uncc.edu",
+"college_name":"University of North Carolina Charlotte",
+"college_code":10,
 "password":"password22",
 "first_name":"Alishia",
 "last_name":"Lavery",
@@ -375,6 +419,8 @@
 },
 {
 "school_email":"mdepew@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password23",
 "first_name":"Margarete",
 "last_name":"Depew",
@@ -391,7 +437,9 @@
 "wakeup_time":730
 },
 {
-"school_email":"ddestefa@ncsu.edu",
+"school_email":"ddestefa@uncg.edu",
+"college_name":"University of North Carolina Greensboro",
+"college_code":11,
 "password":"password24",
 "first_name":"Dacia",
 "last_name":"Destefano",
@@ -409,6 +457,8 @@
 },
 {
 "school_email":"lpujol@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password25",
 "first_name":"Lynwood",
 "last_name":"Pujol",
@@ -426,6 +476,8 @@
 },
 {
 "school_email":"lcomerfo@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password26",
 "first_name":"Lawerence",
 "last_name":"Comerford",
@@ -442,7 +494,9 @@
 "wakeup_time":630
 },
 {
-"school_email":"cdewalt@ncsu.edu",
+"school_email":"cdewalt@usc.edu",
+"college_name":"University of South California",
+"college_code":2,
 "password":"password27",
 "first_name":"Conception",
 "last_name":"Dewalt",
@@ -460,6 +514,8 @@
 },
 {
 "school_email":"agatewoo@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password28",
 "first_name":"Angle",
 "last_name":"Gatewood",
@@ -476,7 +532,9 @@
 "wakeup_time":630
 },
 {
-"school_email":"lsiler@ncsu.edu",
+"school_email":"lsiler@cmu.edu",
+"college_name":"Carnegie Mellon University",
+"college_code":3,
 "password":"password29",
 "first_name":"Lien",
 "last_name":"Siler",
@@ -494,6 +552,8 @@
 },
 {
 "school_email":"cmcaninc@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password30",
 "first_name":"Mahmoud",
 "last_name":"Tohmaz",
@@ -510,7 +570,9 @@
 "wakeup_time":630
 },
 {
-"school_email":"dsinglet@ncsu.edu",
+"school_email":"dsinglet@berkeley.edu",
+"college_name":"University of California at Berkeley",
+"college_code":4,
 "password":"password31",
 "first_name":"Delta",
 "last_name":"Singleterry",
@@ -527,7 +589,9 @@
 "wakeup_time":730
 },
 {
-"school_email":"pandra@ncsu.edu",
+"school_email":"pandra@duke.edu",
+"college_name":"Duke University",
+"college_code":5,
 "password":"password32",
 "first_name":"Pranav",
 "last_name":"Andra",
@@ -545,6 +609,8 @@
 },
 {
 "school_email":"okhan@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password33",
 "first_name":"Orenda",
 "last_name":"Khan",
@@ -561,7 +627,9 @@
 "wakeup_time":730
 },
 {
-"school_email":"kbasak@ncsu.edu",
+"school_email":"kbasak@yale.edu",
+"college_name":"Yale University",
+"college_code":6,
 "password":"password34",
 "first_name":"Kaya",
 "last_name":"Basak",
@@ -578,7 +646,9 @@
 "wakeup_time":630
 },
 {
-"school_email":"hyu@ncsu.edu",
+"school_email":"hyu@nd.edu",
+"college_name":"University of Notre Dame",
+"college_code":7,
 "password":"password35",
 "first_name":"Hiroki",
 "last_name":"Yu",
@@ -595,7 +665,9 @@
 "wakeup_time":630
 },
 {
-"school_email":"ayen@ncsu.edu",
+"school_email":"ayen@uw.edu",
+"college_name":"University of Washington",
+"college_code":8,
 "password":"password36",
 "first_name":"Ayumi",
 "last_name":"Yen",
@@ -612,7 +684,9 @@
 "wakeup_time":830
 },
 {
-"school_email":"rkento@ncsu.edu",
+"school_email":"rkento@unc.edu",
+"college_name":"University of North Carolina at Chapel Hill",
+"college_code":9,
 "password":"password37",
 "first_name":"Rika",
 "last_name":"Kento",
@@ -629,7 +703,9 @@
 "wakeup_time":830
 },
 {
-"school_email":"mthomas@ncsu.edu",
+"school_email":"mthomas@uncc.edu",
+"college_name":"University of North Carolina Charlotte",
+"college_code":10,
 "password":"password38",
 "first_name":"Mark",
 "last_name":"Thomas",
@@ -646,7 +722,9 @@
 "wakeup_time":630
 },
 {
-"school_email":"jwinston@ncsu.edu",
+"school_email":"jwinston@uncg.edu",
+"college_name":"University of North Carolina Greensboro",
+"college_code":11,
 "password":"password39",
 "first_name":"John",
 "last_name":"Winston",
@@ -664,6 +742,8 @@
 },
 {
 "school_email":"emarcus@ncsu.edu",
+"college_name":"North Carolina State University",
+"college_code":1,
 "password":"password40",
 "first_name":"Eddie",
 "last_name":"Marcus",
