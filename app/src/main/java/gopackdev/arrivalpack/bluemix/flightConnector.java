@@ -18,7 +18,7 @@ import gopackdev.arrivalpack.bluemixbean.flightinfobean;
 public class flightConnector {
     private BMSClient client;
     private String subURL = "/api/flightinfo";
-    private boolean addflightinforesult = false;
+    private boolean addFlightinfoResult = false;
     public flightConnector(BMSClient c){this.client = c;}
     private Context context;
 
@@ -27,5 +27,18 @@ public class flightConnector {
         String json = bean.JSONFormat();
         context = ctx;
 
+        HashMap headers = new HashMap();
+        List<String> ctype = new ArrayList<>();
+        ctype.add("application/json");
+        List<String> accept = new ArrayList<>();
+        accept.add("Application/json");
+
+        headers.put("Content-type", ctype);
+        headers.put("Accept", accept);
+
+        request.setHeaders(headers);
+        addFlightinfoResult = false;
+        Log.i("flightInfo Connector",json);
+        request.send(ctx, json, rl);
     }
 }
