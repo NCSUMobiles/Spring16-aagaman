@@ -130,10 +130,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 .getString(getResources().getString(R.string.login_token),null);
         if(student_code == null){
             Toast.makeText(this,"null studnet_code", Toast.LENGTH_SHORT).show();
+            return false;
         }else{
             Toast.makeText(this,"Already logged in!", Toast.LENGTH_SHORT).show();
+            return true;
         }
-        return true;
     }
     public void correctCredential(){
         Intent myIntent = new Intent(LoginActivity.this, HomePage.class);
