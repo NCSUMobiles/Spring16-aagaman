@@ -82,7 +82,6 @@ public class NewAcctScrollingActivity extends AppCompatActivity {
                 String username = emailadd.getText().toString();
                 String password = pw.getText().toString();
                 RadioButton selectedBtn = (RadioButton) findViewById(rg.getCheckedRadioButtonId());
-                String gender = selectedBtn.getText().toString();
                 String firstNameString = firstName.getText().toString();
                 String lastNameString = lastName.getText().toString();
                 String languateStr = language.getText().toString();
@@ -92,6 +91,7 @@ public class NewAcctScrollingActivity extends AppCompatActivity {
                 String favorClassStr = favor_class.getText().toString();
                 String concernStr = concern.getText().toString();
                 String somethingStr = something.getText().toString();
+
                 TimePicker sleepPicker = (TimePicker) findViewById(R.id.sleepTime);
                 TimePicker wakePicker = (TimePicker) findViewById(R.id.wakeTime);
                 int sleepHour = sleepPicker.getCurrentHour();
@@ -104,6 +104,11 @@ public class NewAcctScrollingActivity extends AppCompatActivity {
                 int[] schoolID_list = getResources().getIntArray(R.array.college_code);
                 int schoolID = schoolID_list[shoolID_position];
                 String dietRestrictionStr = diet_restriction.getSelectedItem().toString();
+                if(!validateForm(username,password,selectedBtn,firstNameString,lastNameString,dietRestrictionStr)){
+                    Toast.makeText(getApplicationContext(),"Missing inputs. *- required fields.",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                String gender = selectedBtn.getText().toString();
                 StudentBean bean = new StudentBean(username, password,
                         schoolID, firstNameString, lastNameString, gender,
                         languateStr, nationalityStr, dietRestrictionStr,
@@ -155,4 +160,10 @@ public class NewAcctScrollingActivity extends AppCompatActivity {
         this.finish();
     }
 
+    public boolean validateForm(String un, String pw, RadioButton bt, String first, String last, String diet){
+        if(un==null||pw==null||bt==null||first==null||last==null||diet==null){
+            return false;
+        }
+        return true;
+    }
 }

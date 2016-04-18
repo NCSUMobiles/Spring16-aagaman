@@ -57,7 +57,6 @@
                 android:textSize="14dp"
                 android:id="@+id/editText5"
                 android:layout_span="2"
-                android:layout_below="@+id/userName"
                 android:layout_centerHorizontal="true" />
         </TableRow>
 
@@ -174,7 +173,6 @@
                 android:textSize="14dp"
                 android:id="@+id/editFirstName"
                 android:layout_span="2"
-                android:layout_below="@+id/firstName"
                 android:layout_centerHorizontal="true" />
         </TableRow>
         <TableRow
@@ -264,7 +262,6 @@
                 android:padding="10dp"
                 android:textSize="14dp"
                 android:id="@+id/dietary_restriction"
-                android:layout_below="@+id/nationality"
                 android:layout_centerHorizontal="true"/>
 
             <Spinner
@@ -302,8 +299,50 @@
                 android:textSize="14dp"
                 android:id="@+id/edit_interest_expertise"
                 android:layout_span="2"
-                android:layout_below="@+id/dietary_restriction"
                 android:layout_centerHorizontal="true" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Sleep Time"
+                android:id="@+id/sleepTimeTag"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_centerHorizontal="true" />
+
+            <TimePicker
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:padding="0dp"
+                android:timePickerMode="spinner"
+                android:id="@+id/sleepTime" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Wake Time"
+                android:id="@+id/wakeTimeTag"
+                android:layout_gravity="left"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_centerHorizontal="true" />
+            <TimePicker
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:id="@+id/wakeTime" />
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
@@ -409,49 +448,6 @@
                 android:layout_centerHorizontal="true" />
         </TableRow>
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Sleep Time"
-                android:id="@+id/sleepTimeTag"
-                android:layout_gravity="left"
-                android:padding="10dp"
-                android:textSize="14dp"
-                android:layout_centerHorizontal="true" />
-
-            <TimePicker
-                android:layout_width="0dp"
-                android:layout_weight="3"
-                android:padding="0dp"
-                android:timePickerMode="spinner"
-                android:id="@+id/sleepTime" />
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Wake Time"
-                android:id="@+id/wakeTimeTag"
-                android:layout_gravity="left"
-                android:padding="10dp"
-                android:textSize="14dp"
-                android:layout_centerHorizontal="true" />
-            <TimePicker
-                android:layout_width="0dp"
-                android:layout_weight="3"
-                android:layout_height="wrap_content"
-                android:timePickerMode="spinner"
-                android:id="@+id/wakeTime" />
-        </TableRow>
-        <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <Button
@@ -460,11 +456,12 @@
                 android:layout_weight="1"
                 android:text="Submit"
                 android:id="@+id/submitSignUp"
-                android:layout_below="@+id/wakeTime"
+                android:layout_below="@+id/something_want_to_try_in_future"
                 android:layout_gravity="center"/>
 
 
         </TableRow>
+
     </TableLayout>
 
 </android.support.v4.widget.NestedScrollView>
