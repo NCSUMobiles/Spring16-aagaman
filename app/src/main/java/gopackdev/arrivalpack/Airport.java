@@ -20,7 +20,7 @@ public class Airport extends AppCompatActivity {
 
         client = BMSClient.getInstance();
         try{
-            client.initialize(this, "http://arrivalmobileapp.mybluemix.net", "6d959bbb-9863-4b78-bd85-e92a8ea57159"););
+            client.initialize(this, "http://arrivalmobileapp.mybluemix.net", "6d959bbb-9863-4b78-bd85-e92a8ea57159");
         }catch(MalformedURLException e){
             throw new RuntimeException(e);
         }
@@ -30,7 +30,7 @@ public class Airport extends AppCompatActivity {
 
     public void onStart(){
         super.onStart();
-        EditText txtDate = (EditText)findViewById(R.id.flight_date);
+        /*EditText txtDate = (EditText)findViewById(R.id.flight_date);
         txtDate.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -40,7 +40,7 @@ public class Airport extends AppCompatActivity {
                     dialog.show(ft, "DatePicker");
                 }
             }
-        });
+        });*/
     }
 
 }

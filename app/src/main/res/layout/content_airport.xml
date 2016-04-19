@@ -27,22 +27,25 @@
                     android:textSize="20dp"
                     android:layout_gravity="center"
                     android:textColor="#FFF"
-                    android:layout_span="3"
-                    android:padding="5dp" />
+                    android:layout_span="4"
+                    android:padding="10dp"
+                    android:textStyle="bold"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="Flight Number"
                     android:textSize= "20dp"
-                    android:textColor="#FFF" />
+                    android:textColor="#FFF"
+                    android:padding="10dp"/>
 
                 <EditText
                     android:id="@+id/flight_no"
                     android:layout_width="fill_parent"
-                    android:layout_span = "2"
                     android:layout_height="wrap_content"
+                    android:padding="10dp"
                     android:hint="Enter Flight code"
-                    android:textCursorDrawable="@null" />
+                    android:textCursorDrawable="@null"
+                    android:layout_column="2" />
             </TableRow>
 
             <TableRow>
@@ -50,30 +53,39 @@
                     android:text="Date"
                     android:textSize= "20dp"
                     android:textColor="#FFF"
-                    android:padding="3dp" />
+                    android:padding="10dp" />
 
                 <EditText
                     android:id="@+id/flight_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_span = "2"
+                    android:padding="10dp"
                     android:hint="Enter Arrival Date"/>
+
+
             </TableRow>
 
             <TableRow>
                 <TextView
+                    android:id="@+id/arr_time_text"
                     android:text="Arrival Time"
                     android:textSize= "20dp"
                     android:textColor="#FFF"
-                    android:padding="3dp" />
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"/>
 
+            </TableRow>
+
+            <TableRow>
                 <TimePicker
                     android:id="@+id/dest_arr_time"
-                    android:layout_span = "2"
-                    android:layout_width="match_parent"
+                    android:amPmTextColor="#fff"
+                    android:layout_span = "3"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:padding="30dp"
                     />
-
             </TableRow>
 
             <TableRow>
@@ -83,7 +95,7 @@
                     android:text="Submit"
                     android:textColor="#FFFDED"
                     android:textSize="15sp"
-                    android:layout_span = "3"
+                    android:layout_span = "4"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_width="fill_parent"
@@ -93,6 +105,7 @@
                     android:shadowDx="0"
                     android:shadowDy="0"
                     android:shadowRadius="10"
+                    android:padding="10dp"
                     />
             </TableRow>
 
