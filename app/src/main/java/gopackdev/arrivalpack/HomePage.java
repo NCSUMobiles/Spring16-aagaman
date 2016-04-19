@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import gopackdev.arrivalpack.useraccount.UserAccountManager;
+
 public class HomePage extends AppCompatActivity {
 
     @Override
@@ -32,6 +34,14 @@ public class HomePage extends AppCompatActivity {
     public void Roommate(View v){
         Intent intent1 = new Intent(HomePage.this,Roommate.class);
         startActivity(intent1);
+    }
+
+    public void LogOut(View v){
+        UserAccountManager.logout(this);
+        Intent intent1 = new Intent(HomePage.this,LoginActivity.class);
+        startActivity(intent1);
+        //go back to login page and finish the home page.
+        finish();
     }
 
 }
