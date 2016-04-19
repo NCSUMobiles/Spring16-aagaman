@@ -6,12 +6,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
+
+import java.net.MalformedURLException;
+
 public class Airport extends AppCompatActivity {
+    private BMSClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_airport);
+
+        client = BMSClient.getInstance();
+        try{
+            client.initialize(this, "http://arrivalmobileapp.mybluemix.net", "6d959bbb-9863-4b78-bd85-e92a8ea57159"););
+        }catch(MalformedURLException e){
+            throw new RuntimeException(e);
+        }
+
+
     }
 
     public void onStart(){
