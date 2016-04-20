@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -67,6 +68,67 @@ public class MainHomeActivity extends AppCompatActivity
         TextView email = (TextView) findViewById(R.id.navHeaderUserEmail);
         greet.setText("Hello! "+currentUser.getFirstName());
         email.setText(currentUser.getSchoolEmail());
+        ImageView schoolLogo = (ImageView) findViewById(R.id.navHeaderSchoolLogo);
+        schoolLogo.setImageResource(getSchoolLogoID(currentUser.getSchoolID()));
+    }
+
+
+    private int getSchoolLogoID(int school_code){
+        /**
+         *     <string-array name="college_names">
+         <item>North Carolina State University</item>
+         <item>University of South California</item>
+         <item>Carnegie Mellon</item>
+         <item>University of California, Berkeley</item>
+         <item>Duke University</item>
+         <item>Yale University</item>
+         <item>University of Notre Dame</item>
+         <item>University of Washington</item>
+         <item>University of North Carolina Chapel Hill</item>
+         <item>University of North Carolina Charlotte</item>
+         <item>University of North Carolina Greensboro</item>
+         </string-array>
+
+         <integer-array name="college_code">
+         <item>1</item>
+         <item>2</item>
+         <item>3</item>
+         <item>4</item>
+         <item>5</item>
+         <item>6</item>
+         <item>7</item>
+         <item>8</item>
+         <item>9</item>
+         <item>10</item>
+         <item>11</item>
+         </integer-array>
+         */
+        switch (school_code){
+            case 1:
+                return R.mipmap.ncsu_logo_ic;
+            case 2:
+                return R.mipmap.usc_logo_ic;
+            case 3:
+                return R.mipmap.cmu_logo_ic;
+            case 4:
+                return R.mipmap.ucb_logo_ic;
+            case 5:
+                return R.mipmap.duke_logo_ic;
+            case 6:
+                return R.mipmap.yale_logo_ic;
+            case 7:
+                return R.mipmap.und_logo_ic;
+            case 8:
+                return R.mipmap.uwc_logo_ic;
+            case 9:
+                return R.mipmap.uncch_logo_ic;
+            case 10:
+                return R.mipmap.uncc_logo_ic;
+            case 11:
+                return R.mipmap.uncg_logo_ic;
+            default:
+                return R.mipmap.ncsu_logo_ic;
+        }
     }
     /**
      * Load current cahced log in user.
@@ -111,7 +173,7 @@ public class MainHomeActivity extends AppCompatActivity
 
             @Override
             public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
-                Log.i("MainHomeActivity","Something went wrong on retrieving user data from server.");
+                Log.i("MainHomeActivity","Something went wrong on retrieving user data from server: "+response.toString());
                 new Handler(Looper.getMainLooper()).post(new Runnable() {
                     @Override
                     public void run() {

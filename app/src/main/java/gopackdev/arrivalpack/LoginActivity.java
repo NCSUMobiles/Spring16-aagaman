@@ -139,6 +139,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     public void correctCredential(){
         Intent myIntent = new Intent(LoginActivity.this, MainHomeActivity.class);
         //myIntent.putExtra("key", value); //Optional parameters
+        Toast.makeText(this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
         startActivity(myIntent);
         finish();
     }
@@ -156,7 +157,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     getSharedPreferences(getString(R.string.login_cache),MODE_PRIVATE)
                             .edit().putString(getString(R.string.login_token), obTmp.getString("id")).apply();
                     Log.i("login action",obTmp.getString("id")+"recorded.");
-                    correctCredential();
+                    new Handler(Looper.getMainLooper()).post(new Runnable() {
+                        @Override
+                        public void run() {
+                            correctCredential();
+                        }
+                    });
                 } catch (JSONException e) {
                     Log.i("login action","Error JSON.");
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
