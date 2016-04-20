@@ -137,7 +137,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
     public void correctCredential(){
-        Intent myIntent = new Intent(LoginActivity.this, HomePage.class);
+        Intent myIntent = new Intent(LoginActivity.this, MainHomeActivity.class);
         //myIntent.putExtra("key", value); //Optional parameters
         startActivity(myIntent);
         finish();

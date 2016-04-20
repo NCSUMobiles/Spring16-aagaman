@@ -85,7 +85,7 @@ public class StudentBean {
             this.clubParticipated = json.getString("club_participated");
             this.favoriteClass = json.getString("favorite_class");
             this.recentConcern = json.getString("recent_concern");
-            this.somethingWantToTryInFuture = json.getString("something_want_to_try_in_future");
+            this.somethingWantToTryInFuture = json.optString("something_want_to_try_in_future");
             this.sleepTime = json.getInt("sleep_time");
             this.wakeupTime = json.getInt("wakeup_time");
         } catch (JSONException e) {
@@ -148,5 +148,141 @@ public class StudentBean {
 
     public String getID(){
         return id;
+    }
+
+    public String getSchoolEmail() {
+        return schoolEmail;
+    }
+
+    public void setSchoolEmail(String schoolEmail) {
+        this.schoolEmail = schoolEmail;
+    }
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getFirstLanguage() {
+        return firstLanguage;
+    }
+
+    public void setFirstLanguage(String firstLanguage) {
+        this.firstLanguage = firstLanguage;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+
+    public String getDietaryRestriction() {
+        return dietaryRestriction;
+    }
+
+    public void setDietaryRestriction(String dietaryRestriction) {
+        this.dietaryRestriction = dietaryRestriction;
+    }
+
+    public String getInterestExpertise() {
+        return interestExpertise;
+    }
+
+    public void setInterestExpertise(String interestExpertise) {
+        this.interestExpertise = interestExpertise;
+    }
+
+    public String getClubParticipated() {
+        return clubParticipated;
+    }
+
+    public void setClubParticipated(String clubParticipated) {
+        this.clubParticipated = clubParticipated;
+    }
+
+    public String getFavoriteClass() {
+        return favoriteClass;
+    }
+
+    public void setFavoriteClass(String favoriteClass) {
+        this.favoriteClass = favoriteClass;
+    }
+
+    public String getRecentConcern() {
+        return recentConcern;
+    }
+
+    public void setRecentConcern(String recentConcern) {
+        this.recentConcern = recentConcern;
+    }
+
+    public String getSomethingWantToTryInFuture() {
+        return somethingWantToTryInFuture;
+    }
+
+    public void setSomethingWantToTryInFuture(String somethingWantToTryInFuture) {
+        this.somethingWantToTryInFuture = somethingWantToTryInFuture;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getSleepTime() {
+        return sleepTime;
+    }
+
+    public void setSleepTime(int sleepTime) {
+        this.sleepTime = sleepTime;
+    }
+
+    public int getWakeupTime() {
+        return wakeupTime;
+    }
+
+    public void setWakeupTime(int wakeupTime) {
+        this.wakeupTime = wakeupTime;
+    }
+
+    public int getSchoolID() {
+        return schoolID;
+    }
+
+    public void setSchoolID(int schoolID) {
+        this.schoolID = schoolID;
     }
 }

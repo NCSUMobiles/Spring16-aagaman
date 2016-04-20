@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/match_roommate"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Match Roommate" />
+        <item
+            android:id="@+id/add_flight_info"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Add Flight Info" />
+        <item
+            android:id="@+id/nav_flight_updates"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Flight Updates" />
+    </group>
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/nav_profile_setting"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Profile Setting" />
+            <item
+                android:id="@+id/nav_log_out"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Log out" />
+        </menu>
+    </item>
+
+</menu>
