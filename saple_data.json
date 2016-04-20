@@ -13,9 +13,10 @@
 "club_participated":"MSA",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"spearfishing",
+"something_want_to_try_in_future":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":0
 },
 {
 "school_email":"sesterli@usc.edu",
@@ -31,9 +32,10 @@
 "club_participated":"Chess Club",
 "favorite_class":"Art History",
 "recent_concern":"tuition cost",
-"something_you_want_to_try_for_fun":"skydiving",
+"something_want_to_try_in_future":"skydiving",
 "sleep_time":2225,
-"wakeup_time":745
+"wakeup_time":745,
+"id":1
 },
 {
 "school_email":"nzorn@ncsu.edu",
@@ -49,9 +51,10 @@
 "club_participated":"None",
 "favorite_class":"Ancient History",
 "recent_concern":"finding roommate",
-"something_you_want_to_try_for_fun":"jet skiing",
+"something_want_to_try_in_future":"jet skiing",
 "sleep_time":2100,
-"wakeup_time":700
+"wakeup_time":700,
+"id":2
 },
 {
 "school_email":"adevaul@cmu.edu",
@@ -67,9 +70,10 @@
 "club_participated":"IEEE",
 "favorite_class":"Embedded Systems",
 "recent_concern":"Robotics Competition",
-"something_you_want_to_try_for_fun":"Scuba Diving",
+"something_want_to_try_in_future":"Scuba Diving",
 "sleep_time":2245,
-"wakeup_time":816
+"wakeup_time":816,
+"id":3
 },
 {
 "school_email":"cwelcher@ncsu.edu",
@@ -85,9 +89,10 @@
 "club_participated":"None",
 "favorite_class":"Organic Chemistry",
 "recent_concern":"homework load",
-"something_you_want_to_try_for_fun":"Kayaking",
+"something_want_to_try_in_future":"Kayaking",
 "sleep_time":2355,
-"wakeup_time":1100
+"wakeup_time":1100,
+"id":4
 },
 {
 "school_email":"jcroll@ncsu.edu",
@@ -103,9 +108,10 @@
 "club_participated":"None",
 "favorite_class":"Economics",
 "recent_concern":"studying",
-"something_you_want_to_try_for_fun":"Defy Gravity",
+"something_want_to_try_in_future":"Defy Gravity",
 "sleep_time":2310,
-"wakeup_time":730
+"wakeup_time":730,
+"id":5
 },
 {
 "school_email":"agauger@berkeley.edu",
@@ -121,9 +127,10 @@
 "club_participated":"Boxing Club",
 "favorite_class":"Intro to Psychology",
 "recent_concern":"studying",
-"something_you_want_to_try_for_fun":"spearfishing",
+"something_want_to_try_in_future":"spearfishing",
 "sleep_time":2150,
-"wakeup_time":730
+"wakeup_time":730,
+"id":6
 },
 {
 "school_email":"ejune@ncsu.edu",
@@ -139,9 +146,10 @@
 "club_participated":"Boxing Club",
 "favorite_class":"Operating Systems",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"Kayaking",
+"something_want_to_try_in_future":"Kayaking",
 "sleep_time":2240,
-"wakeup_time":700
+"wakeup_time":700,
+"id":7
 },
 {
 "school_email":"lrawling@ncsu.edu",
@@ -157,9 +165,10 @@
 "club_participated":"Mock UN",
 "favorite_class":"Economics",
 "recent_concern":"studying",
-"something_you_want_to_try_for_fun":"jet skiing",
+"something_want_to_try_in_future":"jet skiing",
 "sleep_time":2150,
-"wakeup_time":600
+"wakeup_time":600,
+"id":8
 },
 {
 "school_email":"ltelford@ncsu.edu",
@@ -175,9 +184,10 @@
 "club_participated":"Mock UN",
 "favorite_class":"Intermediate Business",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"snowboarding",
+"something_want_to_try_in_future":"snowboarding",
 "sleep_time":2400,
-"wakeup_time":730
+"wakeup_time":730,
+"id":9
 },
 {
 "school_email":"jmurdoch@duke.edu",
@@ -193,9 +203,10 @@
 "club_participated":"None",
 "favorite_class":"Software Engineering",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"Scuba Diving",
+"something_want_to_try_in_future":"Scuba Diving",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":10
 },
 {
 "school_email":"malfred@ncsu.edu",
@@ -211,9 +222,10 @@
 "club_participated":"Boxing Club",
 "favorite_class":"Intermediate Economics",
 "recent_concern":"studying",
-"something_you_want_to_try_for_fun":"snowboarding",
+"something_want_to_try_in_future":"snowboarding",
 "sleep_time":2200,
-"wakeup_time":730
+"wakeup_time":730,
+"id":11
 },
 {
 "school_email":"icienfue@ncsu.edu",
@@ -229,9 +241,10 @@
 "club_participated":"MSA",
 "favorite_class":"Building Game AI",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"jet skiing",
+"something_want_to_try_in_future":"jet skiing",
 "sleep_time":2200,
-"wakeup_time":630
+"wakeup_time":630,
+"id":12
 },
 {
 "school_email":"tperras@yale.edu",
@@ -247,9 +260,10 @@
 "club_participated":"None",
 "favorite_class":"None",
 "recent_concern":"None",
-"something_you_want_to_try_for_fun":"skydiving",
+"something_want_to_try_in_future":"skydiving",
 "sleep_time":2330,
-"wakeup_time":1040
+"wakeup_time":1040,
+"id":13
 },
 {
 "school_email":"aburrage@ncsu.edu",
@@ -265,9 +279,10 @@
 "club_participated":"Boxing Club",
 "favorite_class":"Software Engineering",
 "recent_concern":"studying",
-"something_you_want_to_try_for_fun":"skiing",
+"something_want_to_try_in_future":"skiing",
 "sleep_time":2250,
-"wakeup_time":1000
+"wakeup_time":1000,
+"id":14
 },
 {
 "school_email":"rhazan@nd.edu",
@@ -283,9 +298,10 @@
 "club_participated":"SGN",
 "favorite_class":"Intermediate Economics",
 "recent_concern":"studying",
-"something_you_want_to_try_for_fun":"spearfishing",
+"something_want_to_try_in_future":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":15
 },
 {
 "school_email":"sburrowe@uw.edu",
@@ -301,9 +317,10 @@
 "club_participated":"None",
 "favorite_class":"Intro to English",
 "recent_concern":"studying",
-"something_you_want_to_try_for_fun":"sky diving",
+"something_want_to_try_in_future":"sky diving",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":16
 },
 {
 "school_email":"jkratzer@ncsu.edu",
@@ -319,9 +336,10 @@
 "club_participated":"WICS",
 "favorite_class":"C Programming",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"Scuba Diving",
+"something_want_to_try_in_future":"Scuba Diving",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":17
 },
 {
 "school_email":"lzeck@ncsu.edu",
@@ -337,9 +355,10 @@
 "club_participated":"None",
 "favorite_class":"Into to Economics",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"sky diving",
+"something_want_to_try_in_future":"sky diving",
 "sleep_time":2400,
-"wakeup_time":1120
+"wakeup_time":1120,
+"id":18
 },
 {
 "school_email":"scapron@unc.edu",
@@ -355,9 +374,10 @@
 "club_participated":"WICS",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"Racing",
+"something_want_to_try_in_future":"Racing",
 "sleep_time":2250,
-"wakeup_time":700
+"wakeup_time":700,
+"id":19
 },
 {
 "school_email":"avince@ncsu.edu",
@@ -373,9 +393,10 @@
 "club_participated":"MSA",
 "favorite_class":"Software Engineering",
 "recent_concern":"studying",
-"something_you_want_to_try_for_fun":"spearfishing",
+"something_want_to_try_in_future":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":20
 },
 {
 "school_email":"alavery@uncc.edu",
@@ -391,9 +412,10 @@
 "club_participated":"Mock UN",
 "favorite_class":"Modern American History",
 "recent_concern":"school",
-"something_you_want_to_try_for_fun":"sky diving",
+"something_want_to_try_in_future":"sky diving",
 "sleep_time":2350,
-"wakeup_time":730
+"wakeup_time":730,
+"id":21
 },
 {
 "school_email":"mdepew@ncsu.edu",
@@ -409,9 +431,10 @@
 "club_participated":"WICS",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"Scuba Diving",
+"something_want_to_try_in_future":"Scuba Diving",
 "sleep_time":2400,
-"wakeup_time":730
+"wakeup_time":730,
+"id":22
 },
 {
 "school_email":"ddestefa@uncg.edu",
@@ -427,9 +450,10 @@
 "club_participated":"WICS",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"sky diving",
+"something_want_to_try_in_future":"sky diving",
 "sleep_time":2200,
-"wakeup_time":740
+"wakeup_time":740,
+"id":23
 },
 {
 "school_email":"lpujol@ncsu.edu",
@@ -445,9 +469,10 @@
 "club_participated":"None",
 "favorite_class":"Shakespear",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"Scuba Diving",
+"something_want_to_try_in_future":"Scuba Diving",
 "sleep_time":2340,
-"wakeup_time":941
+"wakeup_time":941,
+"id":24
 },
 {
 "school_email":"lcomerfo@ncsu.edu",
@@ -463,9 +488,10 @@
 "club_participated":"None",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"go carting",
+"something_want_to_try_in_future":"go carting",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":25
 },
 {
 "school_email":"cdewalt@usc.edu",
@@ -481,9 +507,10 @@
 "club_participated":"MSA",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"spearfishing",
+"something_want_to_try_in_future":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":26
 },
 {
 "school_email":"agatewoo@ncsu.edu",
@@ -499,9 +526,10 @@
 "club_participated":"WICS",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"parasailing",
+"something_want_to_try_in_future":"parasailing",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":27
 },
 {
 "school_email":"lsiler@cmu.edu",
@@ -517,9 +545,10 @@
 "club_participated":"WICS",
 "favorite_class":"Software Engineering",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"jet skiing",
+"something_want_to_try_in_future":"jet skiing",
 "sleep_time":2140,
-"wakeup_time":730
+"wakeup_time":730,
+"id":28
 },
 {
 "school_email":"cmcaninc@ncsu.edu",
@@ -535,9 +564,10 @@
 "club_participated":"WICS",
 "favorite_class":"Operating Systems",
 "recent_concern":"studying",
-"something_you_want_to_try_for_fun":"sky diving",
+"something_want_to_try_in_future":"sky diving",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":29
 },
 {
 "school_email":"dsinglet@berkeley.edu",
@@ -553,9 +583,10 @@
 "club_participated":"WICS",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"spearfishing",
+"something_want_to_try_in_future":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":730
+"wakeup_time":730,
+"id":30
 },
 {
 "school_email":"pandra@duke.edu",
@@ -571,9 +602,10 @@
 "club_participated":"None",
 "favorite_class":"Software Engineering",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"travelling",
+"something_want_to_try_in_future":"travelling",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":31
 },
 {
 "school_email":"okhan@ncsu.edu",
@@ -589,9 +621,10 @@
 "club_participated":"None",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"spearfishing",
+"something_want_to_try_in_future":"spearfishing",
 "sleep_time":2320,
-"wakeup_time":730
+"wakeup_time":730,
+"id":32
 },
 {
 "school_email":"kbasak@yale.edu",
@@ -607,9 +640,10 @@
 "club_participated":"WICS",
 "favorite_class":"Software Engineering",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"spearfishing",
+"something_want_to_try_in_future":"spearfishing",
 "sleep_time":2200,
-"wakeup_time":630
+"wakeup_time":630,
+"id":33
 },
 {
 "school_email":"hyu@nd.edu",
@@ -625,9 +659,10 @@
 "club_participated":"None",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"Scuba Diving",
+"something_want_to_try_in_future":"Scuba Diving",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":34
 },
 {
 "school_email":"ayen@uw.edu",
@@ -643,9 +678,10 @@
 "club_participated":"WICS",
 "favorite_class":"Software Engineering",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"Sailing",
+"something_want_to_try_in_future":"Sailing",
 "sleep_time":2250,
-"wakeup_time":830
+"wakeup_time":830,
+"id":35
 },
 {
 "school_email":"rkento@unc.edu",
@@ -661,9 +697,10 @@
 "club_participated":"WICS",
 "favorite_class":"Operating Systems",
 "recent_concern":"studying",
-"something_you_want_to_try_for_fun":"spearfishing",
+"something_want_to_try_in_future":"spearfishing",
 "sleep_time":2300,
-"wakeup_time":830
+"wakeup_time":830,
+"id":36
 },
 {
 "school_email":"mthomas@uncc.edu",
@@ -679,9 +716,10 @@
 "club_participated":"None",
 "favorite_class":"Automata",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"Sailing",
+"something_want_to_try_in_future":"Sailing",
 "sleep_time":2300,
-"wakeup_time":630
+"wakeup_time":630,
+"id":37
 },
 {
 "school_email":"jwinston@uncg.edu",
@@ -697,9 +735,10 @@
 "club_participated":"None",
 "favorite_class":"Software Engineering",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"go carting",
+"something_want_to_try_in_future":"go carting",
 "sleep_time":2400,
-"wakeup_time":600
+"wakeup_time":600,
+"id":38
 },
 {
 "school_email":"emarcus@ncsu.edu",
@@ -715,8 +754,9 @@
 "club_participated":"None",
 "favorite_class":"Software Engineering",
 "recent_concern":"grades",
-"something_you_want_to_try_for_fun":"go carting",
+"something_want_to_try_in_future":"go carting",
 "sleep_time":2100,
-"wakeup_time":600
+"wakeup_time":600,
+"id":39
 }
 ]
