@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import gopackdev.arrivalpack.bluemixbean.StudentMatches;
 import gopackdev.arrivalpack.bluemixbean.flightinfobean;
 /**
  * Created by shashwath on 4/16/16.
@@ -41,4 +42,27 @@ public class flightConnector {
         Log.i("flightInfo Connector",json);
         request.send(ctx, json, rl);
     }
+
+    public void getMatches(Context ctx,StudentMatches bean, ResponseListener rl){
+        Request request = new Request(client.getBluemixAppRoute()+subURL +"getMatches", Request.POST);
+        String json = bean.JSONFormat();
+        context = ctx;
+
+        HashMap headers = new HashMap();
+        List<String> ctype = new ArrayList<>();
+        ctype.add("application/json");
+        List<String> accept = new ArrayList<>();
+        accept.add("Application/json");
+
+        headers.put("Content-type", ctype);
+        headers.put("Accept", accept);
+
+        request.setHeaders(headers);
+        addFlightinfoResult = false;
+        Log.i("Get Similar Info",json);
+        request.send(ctx, json, rl);
+    }
+
+
+
 }
