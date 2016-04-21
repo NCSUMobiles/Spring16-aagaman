@@ -186,6 +186,11 @@ public class StudentBean {
         return gender;
     }
 
+    public boolean isMale(){
+        return gender.toLowerCase().equals("male");
+    }
+
+
     public void setGender(String gender) {
         this.gender = gender;
     }

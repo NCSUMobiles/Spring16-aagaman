@@ -78,7 +78,7 @@ public class NewAcctScrollingActivity extends AppCompatActivity {
                 EditText favor_class = (EditText) findViewById(R.id.edit_favorite_class);
                 EditText concern = (EditText) findViewById(R.id.edit_recent_concern);
                 EditText something = (EditText) findViewById(R.id.edit_something_want_to_try_in_future);
-                RadioGroup rg = (RadioGroup) findViewById(R.id.radioGroup);
+                RadioGroup rg = (RadioGroup) findViewById(R.id.genderRadioGroup);
                 String username = emailadd.getText().toString();
                 String password = pw.getText().toString();
                 RadioButton selectedBtn = (RadioButton) findViewById(rg.getCheckedRadioButtonId());

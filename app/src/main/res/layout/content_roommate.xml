@@ -89,7 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Male"
-                    android:id="@+id/radioButton"
+                    android:id="@+id/radioButtonMale"
                     android:checked="false"
                     android:textSize="14dp" />
 
@@ -97,7 +97,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Female"
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/radioButtonFemale"
                     android:checked="false"
                     android:textSize="14dp"/>
             </RadioGroup>

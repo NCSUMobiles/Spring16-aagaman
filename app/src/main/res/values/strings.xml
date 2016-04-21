@@ -27,7 +27,7 @@
 
     <string name="college_title">Choose your college</string>
     <string name="title_activity_airport">Airport</string>
-
+    <string name="title_activity_profile_settings">Profile Settings</string>
     <string-array name="language_list">
         <item>English</item>
         <item>Chinese</item>

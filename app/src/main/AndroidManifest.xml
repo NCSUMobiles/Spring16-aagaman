@@ -51,7 +51,10 @@
         <activity
             android:name=".MainHomeActivity"
             android:label="@string/title_activity_main_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ProfileSettingActivity"
+            android:label="@string/title_activity_profile_settings"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
