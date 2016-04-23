@@ -10,5 +10,4 @@ public class FlightUpdates extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flight_updates);
     }
-
 }

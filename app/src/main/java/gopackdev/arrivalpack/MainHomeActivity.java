@@ -11,7 +11,7 @@ import android.widget.FrameLayout;
 import gopackdev.arrivalpack.baseactivities.DrawerBaseActivity;
 
 
-public class MainHomeActivity extends DrawerBaseActivity {
+    public class MainHomeActivity extends DrawerBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

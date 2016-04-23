@@ -10,16 +10,27 @@ import org.json.JSONObject;
  */
 public class StudentMatches {
 
-    String flightNum;
-    String departureDate;
-    int arrivalHour;
-    int arrivalMin;
+    private String flightNum;
+    private String departureDate;
+    private int arrivalHour;
+    private int arrivalMin;
+    private String StudentId;
 
-    public StudentMatches(String flightNum, String departureDate, int arrivalHour, int arrivalMin){
+    public StudentMatches(String Id, String flightNum, String departureDate, int arrivalHour, int arrivalMin){
         this.flightNum = flightNum;
         this.departureDate = departureDate;
         this.arrivalHour = arrivalHour;
         this.arrivalMin = arrivalMin;
+        this.StudentId = Id;
+        Log.i("Flight Details Entered","Airport");
+    }
+
+    public void setStudentId(String studentId){
+        this.StudentId = studentId;
+    }
+
+    public String getStudentId() {
+        return StudentId;
     }
 
     public String getFlightNum(){

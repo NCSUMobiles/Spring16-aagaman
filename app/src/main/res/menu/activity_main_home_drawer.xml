@@ -14,6 +14,10 @@
             android:id="@+id/nav_flight_updates"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Flight Updates" />
+        <item
+            android:id="@+id/roommate_suggestions"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Roommate Suggestions" />
     </group>
 
     <item android:title="Account">

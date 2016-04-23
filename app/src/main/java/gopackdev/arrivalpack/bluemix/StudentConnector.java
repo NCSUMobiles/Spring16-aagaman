@@ -30,6 +30,7 @@ public class StudentConnector {
         this.client = c;
     }
     private Context context;
+
     public void addStudentToCloudant(StudentBean bean, Context ctx, ResponseListener rl){
         Request request = new Request(client.getBluemixAppRoute() + subURL, Request.POST);
         String json = bean.JSONFormat();
