@@ -1,13 +1,11 @@
 package gopackdev.arrivalpack.baseactivities;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -17,7 +15,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,19 +28,18 @@ import org.json.JSONObject;
 import gopackdev.arrivalpack.Airport;
 import gopackdev.arrivalpack.FlightUpdates;
 import gopackdev.arrivalpack.LoginActivity;
-import gopackdev.arrivalpack.MainHomeActivity;
 import gopackdev.arrivalpack.ProfileSettingActivity;
 import gopackdev.arrivalpack.R;
 import gopackdev.arrivalpack.Roommate;
 import gopackdev.arrivalpack.bluemixbean.StudentBean;
-import gopackdev.arrivalpack.useraccount.CurrentUserHolder;
+import gopackdev.arrivalpack.useraccount.currentUserHolder;
 import gopackdev.arrivalpack.useraccount.UserAccountManager;
 
 public abstract class DrawerBaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     protected StudentBean currentUser;
-    protected CurrentUserHolder userHolder;
+    protected currentUserHolder userHolder;
     private Activity mActivity;
 
     @Override
@@ -152,7 +148,7 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
      * Load current cahced log in user.
      */
     private void loadCurrentUser(){
-        userHolder = CurrentUserHolder.getInstance();
+        userHolder = currentUserHolder.getInstance();
         if(userHolder.isHaveStudentBean()){
             currentUser = userHolder.getStudentBean();
             updateHeader();

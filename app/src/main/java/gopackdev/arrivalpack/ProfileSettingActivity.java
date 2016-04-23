@@ -24,7 +24,6 @@ public class ProfileSettingActivity extends DrawerBaseActivity {
         autoFillProfileForm();
     }
 
-
     public void autoFillProfileForm(){
 //        EditText emailadd = (EditText) findViewById(R.id.editText5);
 //        EditText pw = (EditText) findViewById(R.id.editText6);
