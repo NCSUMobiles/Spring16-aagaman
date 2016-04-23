@@ -69,7 +69,7 @@ public class NewAcctScrollingActivity extends AppCompatActivity {
                 EditText firstName = (EditText) findViewById(R.id.editFirstName);
                 EditText lastName = (EditText) findViewById(R.id.editLastName);
                 EditText language = (EditText) findViewById(R.id.editFirstLanguage);
-                EditText nationality = (EditText) findViewById(R.id.editNationality);
+                Spinner nationality = (Spinner) findViewById(R.id.spinnerNationality);
                 //EditText diet = (EditText) findViewById(R.id.dietary_restrictionDropDown);
                 Spinner diet_restriction = (Spinner) findViewById(R.id.dietary_restrictionDropDown);
                 Spinner school_id = (Spinner) findViewById(R.id.universityDropDown);
@@ -85,7 +85,7 @@ public class NewAcctScrollingActivity extends AppCompatActivity {
                 String firstNameString = firstName.getText().toString();
                 String lastNameString = lastName.getText().toString();
                 String languateStr = language.getText().toString();
-                String nationalityStr = nationality.getText().toString();
+                String nationalityStr = nationality.getSelectedItem().toString();
                 String interestStr = interest.getText().toString();
                 String clubStr = club.getText().toString();
                 String favorClassStr = favor_class.getText().toString();

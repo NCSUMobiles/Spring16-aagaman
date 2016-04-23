@@ -23,6 +23,7 @@ public class StudentBean {
     String favoriteClass;
     String recentConcern;
     String somethingWantToTryInFuture;
+    //The primary key from db
     String id;
     int sleepTime = 0;
     int wakeupTime = 0;
@@ -88,6 +89,8 @@ public class StudentBean {
             this.somethingWantToTryInFuture = json.optString("something_want_to_try_in_future");
             this.sleepTime = json.getInt("sleep_time");
             this.wakeupTime = json.getInt("wakeup_time");
+            //add id attribute.
+            this.id = json.optString("id");
         } catch (JSONException e) {
             Log.e("StudentBean", "Error reading JSON in constructor: " + e.getLocalizedMessage());
         }
@@ -133,7 +136,10 @@ public class StudentBean {
             obj.put("something_want_to_try_in_future",this.somethingWantToTryInFuture);
             obj.put("sleep_time",this.sleepTime);
             obj.put("wakeup_time",this.wakeupTime);
-
+            if(this.id.length() > 0){
+                //if the object converting back to JSON has id...
+                obj.put("id", this.id);
+            }
 
         } catch (JSONException e) {
             e.printStackTrace();

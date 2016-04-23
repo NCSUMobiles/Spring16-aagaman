@@ -238,17 +238,25 @@
                 android:padding="10dp"
                 android:textSize="14dp"
                 />
-
-            <android.support.design.widget.TextInputEditText
+            <Spinner
+                android:id="@+id/spinnerNationality"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:ems="10"
+                android:spinnerMode="dropdown"
                 android:padding="10dp"
-                android:textSize="14dp"
-                android:id="@+id/editNationality"
                 android:layout_span="2"
-                android:layout_centerHorizontal="true" />
+                android:entries="@array/countries_array"
+                android:prompt="@string/nationality_title" />
+            <!--<android.support.design.widget.TextInputEditText-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:inputType="text"-->
+                <!--android:ems="10"-->
+                <!--android:padding="10dp"-->
+                <!--android:textSize="14dp"-->
+                <!--android:id="@+id/editNationality"-->
+                <!--android:layout_span="2"-->
+                <!--android:layout_centerHorizontal="true" />-->
         </TableRow>
 
         <TableRow

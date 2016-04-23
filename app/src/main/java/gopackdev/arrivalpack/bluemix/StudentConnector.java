@@ -49,6 +49,24 @@ public class StudentConnector {
         request.send(ctx, json, rl);
     }
 
+    public void updateStudentToCloudant(StudentBean bean, Context ctx, ResponseListener rl){
+        Request request = new Request(client.getBluemixAppRoute() + subURL, Request.PUT);
+        String json = bean.JSONFormat();
+        context = ctx;
+        HashMap headers = new HashMap();
+        List<String> cType = new ArrayList<>();
+        cType.add("application/json");
+        List<String> accept = new ArrayList<>();
+        accept.add("Application/json");
+
+        headers.put("Content-Type", cType);
+        headers.put("Accept", accept);
+
+        request.setHeaders(headers);
+        addStudentResult = false;
+        Log.i("Student Connector",json);
+        request.send(ctx, json, rl);
+    }
     /**
      * Login method
      * Should only get one value (studnet id)

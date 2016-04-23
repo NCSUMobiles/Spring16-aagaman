@@ -45,7 +45,7 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
     protected StudentBean currentUser;
     protected CurrentUserHolder userHolder;
     private Activity mActivity;
-
+    private boolean paused = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +76,21 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
 //        FrameLayout relativeLayout = (FrameLayout)findViewById(R.id.child_layout);
 //        LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 //        relativeLayout.addView(layoutInflater.inflate(R.layout.content_roommate, null, false));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //Tag if the activity has bee paused.
+        paused = true;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(paused)
+            loadCurrentUser();
+        paused = false;
 
     }
 
