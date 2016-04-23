@@ -32,14 +32,14 @@ import gopackdev.arrivalpack.ProfileSettingActivity;
 import gopackdev.arrivalpack.R;
 import gopackdev.arrivalpack.Roommate;
 import gopackdev.arrivalpack.bluemixbean.StudentBean;
-import gopackdev.arrivalpack.useraccount.currentUserHolder;
+import gopackdev.arrivalpack.useraccount.CurrentUserHolder;
 import gopackdev.arrivalpack.useraccount.UserAccountManager;
 
 public abstract class DrawerBaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     protected StudentBean currentUser;
-    protected currentUserHolder userHolder;
+    protected CurrentUserHolder userHolder;
     private Activity mActivity;
     private boolean paused = false;
     @Override
@@ -163,7 +163,7 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
      * Load current cahced log in user.
      */
     private void loadCurrentUser(){
-        userHolder = currentUserHolder.getInstance();
+        userHolder = CurrentUserHolder.getInstance();
         if(userHolder.isHaveStudentBean()){
             currentUser = userHolder.getStudentBean();
             updateHeader();

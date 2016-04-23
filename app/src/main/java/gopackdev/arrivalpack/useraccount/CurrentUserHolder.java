@@ -5,14 +5,14 @@ import gopackdev.arrivalpack.bluemixbean.StudentBean;
 /**
  * Created by Chi-Han on 4/21/2016.
  */
-public class currentUserHolder {
-    private static currentUserHolder ourInstance = new currentUserHolder();
+public class CurrentUserHolder {
+    private static CurrentUserHolder ourInstance = new CurrentUserHolder();
     private StudentBean sb = null;
-    public static currentUserHolder getInstance() {
+    public static CurrentUserHolder getInstance() {
         return ourInstance;
     }
 
-    private currentUserHolder() {
+    private CurrentUserHolder() {
         sb = null;
     }
 
