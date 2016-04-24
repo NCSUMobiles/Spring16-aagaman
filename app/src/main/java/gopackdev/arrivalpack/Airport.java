@@ -35,7 +35,8 @@ public class Airport  extends DrawerBaseActivity {
     boolean alreadyExists = false;
     boolean result = false;
     boolean setResult = false;
-    private  String flightID = "";
+    String flightID = "";
+    String test = "Hello";
 
     @TargetApi(Build.VERSION_CODES.M)
     @Override
@@ -50,6 +51,7 @@ public class Airport  extends DrawerBaseActivity {
         }
 
         String stud_id1 = currentUser.getID();
+        Log.i("AIRPORT","STUDENT ID" +stud_id1);
         flightConnector flConn = new flightConnector(client);
 
         flConn.getFlightIDByStudentID(Airport.this, stud_id1, new ResponseListener() {
@@ -57,15 +59,13 @@ public class Airport  extends DrawerBaseActivity {
             public void onSuccess(Response response) {
                 Log.i("Success - Response for Flight ID ", "" + response.toString());
 
-
                 JSONArray responseArray = null;
-                String flightID;
 
                 if (response.getResponseText().equals("null")) {
                     alreadyExists = false;
                 } else {
                     // Tried so long to read the response data as JSON but didn't work! So finally using substring
-                    flightID = response.getResponseText().substring(7, 39);
+                    flightID = response.getResponseText().substring(7, 39).toString();
                     Log.i("FLIGHT ID ", "" + flightID);
                     alreadyExists = true;
                 }
@@ -82,6 +82,9 @@ public class Airport  extends DrawerBaseActivity {
             @Override
             public void onClick(View v) {
                 Log.i("ALREADY EXISTS FLAG VALUE INSIDE CLICK", "" + alreadyExists);
+                Log.i("FLIGHT ID IN AIRPORT PAGE: ","" +flightID);
+                Log.i("TEST MESSAGE: ","" +test);
+                Log.i("0.0","0");
                 if (!alreadyExists) {
                     String stud_id = currentUser.getID();
                     EditText no = (EditText) findViewById(R.id.flight_no);
@@ -102,8 +105,7 @@ public class Airport  extends DrawerBaseActivity {
                                 @Override
                                 public void run() {
                                     Toast.makeText(getApplicationContext(), "Information successfully added to database", Toast.LENGTH_LONG).show();
-                                    Intent intent1 = new Intent(Airport.this, MainHomeActivity.class);
-                                    startActivity(intent1);
+                                    closeAcitvity();
                                 }
                             });
                         }
@@ -121,6 +123,7 @@ public class Airport  extends DrawerBaseActivity {
                     });
                 } else {
                     // Update the flight Timings
+                    Log.i("I'm here ","1");
                     EditText no = (EditText) findViewById(R.id.flight_no);
                     EditText dat = (EditText) findViewById(R.id.flight_date);
                     String flightNo = no.getText().toString();
@@ -130,18 +133,20 @@ public class Airport  extends DrawerBaseActivity {
                     int min = arrTime.getMinute();
                     String stud_id2 = currentUser.getID();
                     StudentMatches smbean = new StudentMatches(stud_id2, flightNo, flightDate, hour, min);
-
+                    Log.i("I'm here ","2");
+                    Log.i("FLIGHT ID IN AIRPORT PAGE: BEFORE ","" +flightID);
+                    Log.i("I'm here ","3");
                     flightConnector flConn = new flightConnector(client);
-                    flConn.updateFlightSchedule(Airport.this, smbean, flightID, new ResponseListener() {
+                    Log.i("FLIGHT ID IN AIRPORT PAGE: ","" +flightID);
+                    flConn.updateFlightSchedule(getApplicationContext(), smbean, flightID, new ResponseListener() {
                         @Override
                         public void onSuccess(Response response) {
                             Log.i("Success - Flight Schedule Updated: ", "" + response.toString());
                             new Handler(Looper.getMainLooper()).post(new Runnable() {
                                 @Override
                                 public void run() {
-                                    Toast.makeText(Airport.this, "You have updated your flight schedule!", Toast.LENGTH_LONG).show();
-                                    Intent intent1 = new Intent(Airport.this, MainHomeActivity.class);
-                                    startActivity(intent1);
+                                Toast.makeText(Airport.this, "You have updated your flight schedule!", Toast.LENGTH_LONG).show();
+                                closeAcitvity();
                                 }
                             });
                         }
@@ -154,6 +159,10 @@ public class Airport  extends DrawerBaseActivity {
                 }
             }
         });
+    }
+
+    private void closeAcitvity() {
+        this.finish();
     }
 
     public void onStart(){

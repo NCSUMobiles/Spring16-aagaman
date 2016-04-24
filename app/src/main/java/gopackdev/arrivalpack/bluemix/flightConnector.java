@@ -71,51 +71,20 @@ public class flightConnector {
 
         request.send(ctx, detail.toString(), rl1);
     }
-    /*
 
-        function updateItem(id, text){
-            var item = {
-                    "text": text
-            }
-
-            return $.ajax( {
-                    url:API_URL + "/" + id,
-                    method: "PUT",
-                    contentType: "application/json",
-                    data: JSON.stringify(item)
-            });
-        }
-    */
-    public void updateFlightSchedule(Context ctx, StudentMatches smbean2, String flightID, ResponseListener rl1){
-        Log.i("PUT","PUT 1");
-        Request request = new Request(client.getBluemixAppRoute()+ subURL+flightID, Request.POST);
-        JSONObject detail1 = new JSONObject();
-        Log.i("PUT","PUT 2");
-        try {
-            Log.i("PUT","PUT 3");
-            detail1.put("student_id", smbean2.getStudentId());
-            detail1.put("flight_number", smbean2.getFlightNum());
-            detail1.put("flight_date", smbean2.getDepartureDate());
-            detail1.put("arrival_hour", smbean2.getArrivalHour());
-            detail1.put("id",flightID);
-            Log.i("PUT", "PUT 4");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        Log.i("PUT","PUT 5");
+    public void updateFlightSchedule(Context ctx, StudentMatches smbean2,String flightID, ResponseListener rl1){
+        Log.i("FLIGHT ID IN CONNECTOR: "," "+flightID);
+        Request request = new Request(client.getBluemixAppRoute()+ subURL +flightID, Request.PUT);
+        String json = smbean2.JSONFormat();
         context = ctx;
-        Log.i("PUT","PUT 6");
         HashMap headers = new HashMap();
         List<String> ctype = new ArrayList<>();
         ctype.add("application/json");
         List<String> accept = new ArrayList<>();
         accept.add("Application/json");
-        Log.i("PUT", "PUT 7");
         headers.put("Content-type", ctype);
         headers.put("Accept", accept);
-        Log.i("PUT", "PUT 8");
         request.setHeaders(headers);
-        request.send(ctx, detail1.toString(), rl1);
-        Log.i("PUT", "PUT 9");
+        request.send(ctx, json, rl1);
     }
 }

@@ -22,7 +22,6 @@ public class StudentMatches {
         this.arrivalHour = arrivalHour;
         this.arrivalMin = arrivalMin;
         this.StudentId = Id;
-        Log.i("Flight Details Entered","Airport");
     }
 
     public void setStudentId(String studentId){
@@ -68,12 +67,11 @@ public class StudentMatches {
     public String JSONFormat(){
 
         JSONObject json = new JSONObject();
-
         try{
-            json.put("flightNum",this.flightNum);
-            json.put("departurDate",this.departureDate);
-            json.put("arrHour",this.arrivalHour);
-            json.put("arrMin",this.arrivalMin);
+            json.put("student_id",this.StudentId);
+            json.put("flight_number",this.flightNum);
+            json.put("flight_date",this.departureDate);
+            json.put("arrival_hour",this.arrivalHour);
         } catch (JSONException e){
             Log.e("Studentbean","Error handling JSONForamtfunction: "+e.getLocalizedMessage());
         }

@@ -99,6 +99,7 @@ public class StudentBean {
      *  Get JSON data format for Student
      * @return
      */
+
     public String JSONFormat(){
 //        String json = "{" +
 //                "  \"school_email\": \""+this.schoolEmail+"\"," +
@@ -147,7 +148,6 @@ public class StudentBean {
         return obj.toString();
 
     }
-
     public void setID(String id){
         this.id = id;
     }

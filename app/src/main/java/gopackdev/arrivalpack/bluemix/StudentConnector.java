@@ -150,7 +150,4 @@ public class StudentConnector {
         Log.i("Student Connector","get studentBySchool");
         request.send(ctx, rl);
     }
-
-
-
 }
