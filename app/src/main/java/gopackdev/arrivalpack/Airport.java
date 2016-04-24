@@ -2,6 +2,7 @@ package gopackdev.arrivalpack;
 
 import android.annotation.TargetApi;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -18,6 +19,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.Response;
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.ResponseListener;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,58 +32,133 @@ import gopackdev.arrivalpack.bluemixbean.StudentMatches;
 
 public class Airport  extends DrawerBaseActivity {
     private BMSClient client;
+    boolean alreadyExists = false;
+    boolean result = false;
+    boolean setResult = false;
+    private  String flightID = "";
 
     @TargetApi(Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_airport);
-        Log.i("1", "1");
         client = BMSClient.getInstance();
-        Log.i("1","2");
         try {
-            Log.i("1","2.1");
             client.initialize(this, "http://arrivalmobileapp.mybluemix.net", "6d959bbb-9863-4b78-bd85-e92a8ea57159");
-            Log.i("1", "2.2");
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-        Log.i("1", "3");
+
+        String stud_id1 = currentUser.getID();
+        flightConnector flConn = new flightConnector(client);
+
+        flConn.getFlightIDByStudentID(Airport.this, stud_id1, new ResponseListener() {
+            @Override
+            public void onSuccess(Response response) {
+                Log.i("Success - Response for Flight ID ", "" + response.toString());
+
+
+                JSONArray responseArray = null;
+                String flightID;
+
+                if (response.getResponseText().equals("null")) {
+                    alreadyExists = false;
+                } else {
+                    // Tried so long to read the response data as JSON but didn't work! So finally using substring
+                    flightID = response.getResponseText().substring(7, 39);
+                    Log.i("FLIGHT ID ", "" + flightID);
+                    alreadyExists = true;
+                }
+            }
+
+            @Override
+            public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
+                Log.i("Failure - Response for Flight ID: ", response.toString());
+            }
+        });
 
         Button btn = (Button)findViewById(R.id.flightInfo);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String stud_id = currentUser.getID();
-                Log.i("Student ID in Airport Acitivity: ", stud_id);
-                EditText no = (EditText) findViewById(R.id.flight_no);
-                EditText dat = (EditText) findViewById(R.id.flight_date);
-                String flightNo = no.getText().toString();
-                String flightDate = dat.getText().toString();
-                TimePicker arrTime = (TimePicker) findViewById(R.id.dest_arr_time);
-                int hour = arrTime.getHour();
-                int min = arrTime.getMinute();
-                StudentMatches smbean = new StudentMatches(stud_id, flightNo, flightDate, hour, min);
+                Log.i("ALREADY EXISTS FLAG VALUE INSIDE CLICK", "" + alreadyExists);
+                if (!alreadyExists) {
+                    String stud_id = currentUser.getID();
+                    EditText no = (EditText) findViewById(R.id.flight_no);
+                    EditText dat = (EditText) findViewById(R.id.flight_date);
+                    String flightNo = no.getText().toString();
+                    String flightDate = dat.getText().toString();
+                    TimePicker arrTime = (TimePicker) findViewById(R.id.dest_arr_time);
+                    int hour = arrTime.getHour();
+                    int min = arrTime.getMinute();
+                    StudentMatches smbean1 = new StudentMatches(stud_id, flightNo, flightDate, hour, min);
 
-                flightConnector flConn = new flightConnector(client);
-                flConn.addflightinfotoCloudant(Airport.this, smbean, new ResponseListener() {
-                    @Override
-                    public void onSuccess(Response response) {
-                        Log.i("Airport Data added to DB", "success");
-                    }
+                    flightConnector flConn = new flightConnector(client);
+                    flConn.addflightinfotoCloudant(Airport.this, smbean1, new ResponseListener() {
+                        @Override
+                        public void onSuccess(Response response) {
+                            Log.i("Airport Data added to DB", "success");
+                            new Handler(Looper.getMainLooper()).post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(getApplicationContext(), "Information successfully added to database", Toast.LENGTH_LONG).show();
+                                    Intent intent1 = new Intent(Airport.this, MainHomeActivity.class);
+                                    startActivity(intent1);
+                                }
+                            });
+                        }
 
-                    @Override
-                    public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
-                        Log.i("Failed to add airport data", "failure " + response);
-                    }
-                });
+                        @Override
+                        public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
+                            Log.i("Failed to add airport data", "failure " + response);
+                            new Handler(Looper.getMainLooper()).post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(Airport.this, "Oops! There was some error, try again!", Toast.LENGTH_LONG).show();
+                                }
+                            });
+                        }
+                    });
+                } else {
+                    // Update the flight Timings
+                    EditText no = (EditText) findViewById(R.id.flight_no);
+                    EditText dat = (EditText) findViewById(R.id.flight_date);
+                    String flightNo = no.getText().toString();
+                    String flightDate = dat.getText().toString();
+                    TimePicker arrTime = (TimePicker) findViewById(R.id.dest_arr_time);
+                    int hour = arrTime.getHour();
+                    int min = arrTime.getMinute();
+                    String stud_id2 = currentUser.getID();
+                    StudentMatches smbean = new StudentMatches(stud_id2, flightNo, flightDate, hour, min);
+
+                    flightConnector flConn = new flightConnector(client);
+                    flConn.updateFlightSchedule(Airport.this, smbean, flightID, new ResponseListener() {
+                        @Override
+                        public void onSuccess(Response response) {
+                            Log.i("Success - Flight Schedule Updated: ", "" + response.toString());
+                            new Handler(Looper.getMainLooper()).post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(Airport.this, "You have updated your flight schedule!", Toast.LENGTH_LONG).show();
+                                    Intent intent1 = new Intent(Airport.this, MainHomeActivity.class);
+                                    startActivity(intent1);
+                                }
+                            });
+                        }
+
+                        @Override
+                        public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
+                            Log.i("Failure - Flight Schedule not updated: ", "" + response.toString());
+                        }
+                    });
+                }
             }
         });
     }
 
     public void onStart(){
         super.onStart();
-        /*EditText txtDate = (EditText)findViewById(R.id.flight_date);
+        EditText txtDate = (EditText)findViewById(R.id.flight_date);
         txtDate.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -91,7 +168,7 @@ public class Airport  extends DrawerBaseActivity {
                     dialog.show(ft, "DatePicker");
                 }
             }
-        });*/
+        });
     }
 
 }
