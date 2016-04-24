@@ -17,4 +17,15 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <style name="InlineActionButton" parent="android:Widget.Button">
+        <item name="android:background">@drawable/textselector</item>
+        <item name="android:textColor">#ff747474</item>
+        <item name="android:height">25dp</item>
+        <item name="android:textSize">@dimen/plans_list_item_text_size</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:padding">@dimen/plans_list_item_text_padding</item>
+        <item name="android:includeFontPadding">true</item>
+        <item name="android:focusable">false</item>
+    </style>
 </resources>
