@@ -304,6 +304,8 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
 
     public void LogOut(){
         UserAccountManager.logout(this);
+        userHolder.setStudentBean(null);
+        currentUser = null;
         Intent intent1 = new Intent(DrawerBaseActivity.this,LoginActivity.class);
         startActivity(intent1);
         //go back to login page and finish the home page.
