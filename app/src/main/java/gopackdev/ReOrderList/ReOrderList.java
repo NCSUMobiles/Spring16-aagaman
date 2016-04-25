@@ -10,6 +10,11 @@ import gopackdev.arrivalpack.bluemix.StudentConnector;
 import gopackdev.arrivalpack.bluemixbean.StudentBean;
 import gopackdev.arrivalpack.listviewadapter.RoommateRecycleAdapter;
 
+/*
+ * Reorder class that contains function findMatch which expects a list of student beans and also
+ * boolean values representing the different categories to be filtered. Function then sorts the array
+ * and returns the sorted array.
+ */
 
 public class ReOrderList extends DrawerBaseActivity {
 
