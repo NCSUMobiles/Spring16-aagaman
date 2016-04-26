@@ -11,13 +11,29 @@ import org.json.JSONObject;
 public class FlightBuddies {
 
     String Student_ID;
-    String First_Name;
-    String Last_Name;
+    String Flight_Number;
+    String Date;
 
-    public FlightBuddies(String id, String first_Name, String last_Name){
+    public FlightBuddies(String id, String flight_Number, String date){
         this.Student_ID = id;
-        this.First_Name = first_Name;
-        this.Last_Name = last_Name;
+        this.Flight_Number = flight_Number;
+        this.Date = date;
+    }
+
+    public String getFlight_ID() {
+        return Flight_Number;
+    }
+
+    public void setFlight_ID(String flight_ID) {
+        Flight_Number = flight_ID;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String date) {
+        Date = date;
     }
 
     public String getStudent_ID() {
@@ -28,32 +44,16 @@ public class FlightBuddies {
         Student_ID = student_ID;
     }
 
-    public String getFirst_Name() {
-        return First_Name;
-    }
-
-    public void setFirst_Name(String first_Name) {
-        First_Name = first_Name;
-    }
-
-    public String getLast_Name() {
-        return Last_Name;
-    }
-
-    public void setLast_Name(String last_Name) {
-        Last_Name = last_Name;
-    }
-
     public String JSONFormat(){
 
         JSONObject json = new JSONObject();
 
         try{
-            json.put("first_name",this.getFirst_Name());
-            json.put("last_name",this.getLast_Name());
-            json.put("email",this.getStudent_ID());
+            json.put("student_id",this.getStudent_ID());
+            json.put("flight_number",this.getFlight_ID());
+            json.put("flight_date",this.getDate());
         } catch (JSONException e){
-            Log.e("Studentbean", "Error handling JSONForamtfunction: " + e.getLocalizedMessage());
+            Log.e("Studentbean", "Error handling JSONFormatfunction: " + e.getLocalizedMessage());
         }
         return json.toString();
     }
