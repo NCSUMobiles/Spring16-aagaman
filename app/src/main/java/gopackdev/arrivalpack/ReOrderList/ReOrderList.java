@@ -65,8 +65,8 @@ public class ReOrderList extends DrawerBaseActivity {
         if (dietary_restriction && (super.currentUser.getDietaryRestriction() == student.getDietaryRestriction())) dietaryValue     = 100;
         if (language            && (super.currentUser.getFirstLanguage()      == student.getFirstLanguage()))      languageValue    = 100;
 
-        if (sleepTime) sleepTimeValue = Math.abs(super.currentUser.getSleepTime()  - student.getSleepTime());
-        if (wakeTime)  wakeTimeValue  = Math.abs(super.currentUser.getWakeupTime() - student.getWakeupTime());
+        if (sleepTime) sleepTimeValue = 100 - Math.abs((super.currentUser.getSleepTime()  - student.getSleepTime() )*100/2400);
+        if (wakeTime)  wakeTimeValue  = 100 - Math.abs((super.currentUser.getWakeupTime() - student.getWakeupTime())*100/2400);
 
         return genderValue + languageValue + nationalityValue + dietaryValue + sleepTimeValue + wakeTimeValue;
     }
