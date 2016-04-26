@@ -3,9 +3,9 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/match_roommate"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Match Roommate" />
+            android:id="@+id/roommate_suggestions"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Roommate Suggestions" />
         <item
             android:id="@+id/add_flight_info"
             android:icon="@mipmap/ic_add_flight"
@@ -14,10 +14,6 @@
             android:id="@+id/nav_flight_updates"
             android:icon="@mipmap/ic_flight"
             android:title="Flight Updates" />
-        <item
-            android:id="@+id/roommate_suggestions"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Roommate Suggestions" />
     </group>
 
     <item android:title="Account">

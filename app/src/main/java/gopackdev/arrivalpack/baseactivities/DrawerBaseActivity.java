@@ -28,6 +28,7 @@ import org.json.JSONObject;
 import gopackdev.arrivalpack.Airport;
 import gopackdev.arrivalpack.FlightUpdates;
 import gopackdev.arrivalpack.LoginActivity;
+import gopackdev.arrivalpack.MainHomeActivity;
 import gopackdev.arrivalpack.ProfileSettingActivity;
 import gopackdev.arrivalpack.R;
 import gopackdev.arrivalpack.Roommate;
@@ -42,6 +43,7 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
     protected CurrentUserHolder userHolder;
     private Activity mActivity;
     private boolean paused = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,25 +86,25 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        if(paused)
+        if (paused)
             loadCurrentUser();
         paused = false;
 
     }
 
-    private void updateHeader(){
+    private void updateHeader() {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         View header = navigationView.getHeaderView(0);
         TextView greet = (TextView) header.findViewById(R.id.navHeaderUserGreetText);
         TextView email = (TextView) header.findViewById(R.id.navHeaderUserEmail);
-        greet.setText("Hello! "+currentUser.getFirstName());
+        greet.setText("Hello! " + currentUser.getFirstName());
         email.setText(currentUser.getSchoolEmail());
         ImageView schoolLogo = (ImageView) header.findViewById(R.id.navHeaderSchoolLogo);
         schoolLogo.setImageResource(getSchoolLogoID(currentUser.getSchoolID()));
     }
 
 
-    public static int getSchoolLogoID(int school_code){
+    public static int getSchoolLogoID(int school_code) {
         /**
          *     <string-array name="college_names">
          <item>North Carolina State University</item>
@@ -132,7 +134,7 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
          <item>11</item>
          </integer-array>
          */
-        switch (school_code){
+        switch (school_code) {
             case 1:
                 return R.mipmap.ncsu_logo_ic;
             case 2:
@@ -159,17 +161,18 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
                 return R.mipmap.ncsu_logo_ic;
         }
     }
+
     /**
      * Load current cahced log in user.
      */
-    private void loadCurrentUser(){
+    private void loadCurrentUser() {
         userHolder = CurrentUserHolder.getInstance();
-        if(userHolder.isHaveStudentBean()){
+        if (userHolder.isHaveStudentBean()) {
             currentUser = userHolder.getStudentBean();
             updateHeader();
-        }else {
-            String student_code = getSharedPreferences(getResources().getString(R.string.login_cache),MODE_PRIVATE)
-                    .getString(getResources().getString(R.string.login_token),null);
+        } else {
+            String student_code = getSharedPreferences(getResources().getString(R.string.login_cache), MODE_PRIVATE)
+                    .getString(getResources().getString(R.string.login_token), null);
             UserAccountManager.getChachedUser(this, student_code, new ResponseListener() {
                 @Override
                 public void onSuccess(Response response) {
@@ -188,14 +191,14 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
 
                             }
                         });
-                        Log.i("MainHome",obTmp.getString("id")+"get!");
+                        Log.i("MainHome", obTmp.getString("id") + "get!");
 //                    correctCredential();
                     } catch (JSONException e) {
-                        Log.i("MainHome","Error JSON.");
+                        Log.i("MainHome", "Error JSON.");
                         new Handler(Looper.getMainLooper()).post(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(getApplicationContext(),"Please login again...",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Please login again...", Toast.LENGTH_SHORT).show();
                                 LogOut();
                             }
                         });
@@ -210,11 +213,11 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
 
                 @Override
                 public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
-                    Log.i("MainHomeActivity","Something went wrong on retrieving user data from server: "+response.toString());
+                    Log.i("MainHomeActivity", "Something went wrong on retrieving user data from server: " + response.toString());
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(getApplicationContext(), "Something went wrong, please try again later.",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Something went wrong, please try again later.", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
@@ -222,6 +225,7 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
 
         }
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -260,7 +264,7 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.match_roommate) {
+        if (id == R.id.roommate_suggestions) {
             // Handle the camera action
             Roommate();
         } else if (id == R.id.add_flight_info) {
@@ -279,34 +283,42 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
         return true;
     }
 
-    public void ProfileSetting(){
-        Intent myIntent = new Intent(DrawerBaseActivity.this, ProfileSettingActivity.class);
-        //myIntent.putExtra("key", value); //Optional parameters
-        startActivity(myIntent);
+    public void ProfileSetting() {
+        if (!getClass().equals(ProfileSettingActivity.class)) {
+            Intent myIntent = new Intent(DrawerBaseActivity.this, ProfileSettingActivity.class);
+            //myIntent.putExtra("key", value); //Optional parameters
+            startActivity(myIntent);
+        }
     }
+
     // temp actions
-    public void Airport()
-    {
-        Intent myIntent = new Intent(DrawerBaseActivity.this, Airport.class);
-        //myIntent.putExtra("key", value); //Optional parameters
-        startActivity(myIntent);
+    public void Airport() {
+        if (!getClass().equals(Airport.class)) {
+            Intent myIntent = new Intent(DrawerBaseActivity.this, Airport.class);
+            //myIntent.putExtra("key", value); //Optional parameters
+            startActivity(myIntent);
+        }
     }
 
-    public void flightUpdates(){
-        Intent intent = new Intent(DrawerBaseActivity.this,FlightUpdates.class);
-        startActivity(intent);
+    public void flightUpdates() {
+        if (!getClass().equals(FlightUpdates.class)) {
+            Intent intent = new Intent(DrawerBaseActivity.this, FlightUpdates.class);
+            startActivity(intent);
+        }
     }
 
-    public void Roommate(){
-        Intent intent1 = new Intent(DrawerBaseActivity.this,Roommate.class);
-        startActivity(intent1);
+    public void Roommate() {
+        if (!getClass().equals(MainHomeActivity.class)) {
+            Intent intent1 = new Intent(DrawerBaseActivity.this, MainHomeActivity.class);
+            startActivity(intent1);
+        }
     }
 
-    public void LogOut(){
+    public void LogOut() {
         UserAccountManager.logout(this);
         userHolder.setStudentBean(null);
         currentUser = null;
-        Intent intent1 = new Intent(DrawerBaseActivity.this,LoginActivity.class);
+        Intent intent1 = new Intent(DrawerBaseActivity.this, LoginActivity.class);
         startActivity(intent1);
         //go back to login page and finish the home page.
         finish();

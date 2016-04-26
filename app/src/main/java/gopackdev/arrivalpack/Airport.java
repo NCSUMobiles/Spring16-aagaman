@@ -2,6 +2,7 @@ package gopackdev.arrivalpack;
 
 import android.annotation.TargetApi;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -9,9 +10,11 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -42,7 +45,11 @@ public class Airport  extends DrawerBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_airport);
+        //setContentView(R.layout.activity_airport);
+        FrameLayout relativeLayout = (FrameLayout) findViewById(R.id.child_layout);
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        relativeLayout.addView(layoutInflater.inflate(R.layout.content_airport, null, false));
+        //---- avoid override whole base activtiy layout
         client = BMSClient.getInstance();
         try {
             client.initialize(this, "http://arrivalmobileapp.mybluemix.net", "6d959bbb-9863-4b78-bd85-e92a8ea57159");

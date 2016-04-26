@@ -1,5 +1,6 @@
 package gopackdev.arrivalpack;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -7,6 +8,8 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -35,8 +38,11 @@ public class FlightUpdates  extends DrawerBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flight_updates);
-
+        //setContentView(R.layout.activity_flight_updates);
+        FrameLayout relativeLayout = (FrameLayout) findViewById(R.id.child_layout);
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        relativeLayout.addView(layoutInflater.inflate(R.layout.content_flight_updates, null, false));
+        //---- avoid override whole base activtiy layout
         client = BMSClient.getInstance();
         try {
             client.initialize(this, "http://arrivalmobileapp.mybluemix.net", "6d959bbb-9863-4b78-bd85-e92a8ea57159");
