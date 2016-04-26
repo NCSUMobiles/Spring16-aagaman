@@ -102,7 +102,7 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
     }
 
 
-    private int getSchoolLogoID(int school_code){
+    public static int getSchoolLogoID(int school_code){
         /**
          *     <string-array name="college_names">
          <item>North Carolina State University</item>

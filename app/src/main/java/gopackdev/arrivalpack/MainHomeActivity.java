@@ -67,7 +67,7 @@ public class MainHomeActivity extends DrawerBaseActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new RoommateRecycleAdapter(student_recom_list);
+        mAdapter = new RoommateRecycleAdapter(student_recom_list, this);
         mRecyclerView.setAdapter(mAdapter);
         new Handler(Looper.getMainLooper()).post(new Runnable() {
             @Override
