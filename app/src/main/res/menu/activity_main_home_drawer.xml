@@ -8,11 +8,11 @@
             android:title="Match Roommate" />
         <item
             android:id="@+id/add_flight_info"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@mipmap/ic_add_flight"
             android:title="Add Flight Info" />
         <item
             android:id="@+id/nav_flight_updates"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/ic_flight"
             android:title="Flight Updates" />
         <item
             android:id="@+id/roommate_suggestions"
@@ -24,11 +24,11 @@
         <menu>
             <item
                 android:id="@+id/nav_profile_setting"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@mipmap/ic_settings"
                 android:title="Profile Setting" />
             <item
                 android:id="@+id/nav_log_out"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@mipmap/ic_logout"
                 android:title="Log out" />
         </menu>
     </item>

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public class RoommateRecycleAdapter extends RecyclerView.Adapter<RoommateRecycle
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView studentName;
-        public TextView studentGender;
+        public ImageView studentGender;
         public TextView studentEmail;
         public TextView studentNation;
         public Button detailsBtn;
@@ -41,7 +42,7 @@ public class RoommateRecycleAdapter extends RecyclerView.Adapter<RoommateRecycle
         public ViewHolder(View v) {
             super(v);
             studentName = (TextView) itemView.findViewById(R.id.studentName);
-            studentGender = (TextView) itemView.findViewById(R.id.studentGender);
+            studentGender = (ImageView) itemView.findViewById(R.id.genderIcon);
             studentEmail = (TextView) itemView.findViewById(R.id.studentEmail);
             studentNation = (TextView) itemView.findViewById(R.id.studentCountry);
             detailsBtn = (Button) itemView.findViewById(R.id.detailsBtn);
@@ -77,7 +78,11 @@ public class RoommateRecycleAdapter extends RecyclerView.Adapter<RoommateRecycle
         StudentBean tmp_b = studentBeanList.get(position);
         holder.studentName.setText(tmp_b.getFirstName() + " " + tmp_b.getLastName());
         holder.studentEmail.setText(tmp_b.getSchoolEmail());
-        holder.studentGender.setText(tmp_b.getGender());
+        if(tmp_b.isMale()){
+            holder.studentGender.setImageResource(R.mipmap.ic_male_default_portrait);
+        }else{
+            holder.studentGender.setImageResource(R.mipmap.ic_female_default_portrait);
+        }
         holder.studentNation.setText(tmp_b.getNationality());
         holder.chatBtn.setTag(position);
         holder.chatBtn.setOnClickListener(new View.OnClickListener() {
