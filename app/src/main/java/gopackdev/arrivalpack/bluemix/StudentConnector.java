@@ -150,4 +150,22 @@ public class StudentConnector {
         Log.i("Student Connector","get studentBySchool");
         request.send(ctx, rl);
     }
+
+    public void getStudentDetails(Context ctx, String studID, ResponseListener rl){
+        Request request = new Request(client.getBluemixAppRoute() + subURL + "getStudentDetailsByStudentID?sID="+studID, Request.GET);
+        context = ctx;
+        HashMap headers = new HashMap();
+        List<String> cType = new ArrayList<>();
+        cType.add("application/json");
+        List<String> accept = new ArrayList<>();
+        accept.add("Application/json");
+
+        headers.put("Content-Type", cType);
+        headers.put("Accept", accept);
+
+        request.setHeaders(headers);
+        addStudentResult = false;
+        Log.i("Student Connector","get studentBySchool");
+        request.send(ctx, rl);
+    }
 }
