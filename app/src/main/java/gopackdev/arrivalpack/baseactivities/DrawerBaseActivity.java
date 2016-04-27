@@ -320,6 +320,9 @@ public abstract class DrawerBaseActivity extends AppCompatActivity
         userHolder.setStudentBean(null);
         currentUser = null;
         Intent intent1 = new Intent(DrawerBaseActivity.this, LoginActivity.class);
+        intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent1);
         //go back to login page and finish the home page.
         finish();
