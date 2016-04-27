@@ -14,6 +14,7 @@
     <!-- Strings related to login -->
     <!-- Strings for list filter settings-->
     <string name="roommate_list_preference">RoommateListPreference</string>
+    <string name="school_preference">SchoolePreference</string>
     <string name="gender_preference">GenderPreference</string>
     <string name="language_preference">LanguagePreference</string>
     <string name="country_preference">CountryPreference</string>

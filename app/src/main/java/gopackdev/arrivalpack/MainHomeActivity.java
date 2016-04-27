@@ -104,7 +104,9 @@ public class MainHomeActivity extends DrawerBaseActivity implements SortByDialog
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
                 StudentConnector sc = new StudentConnector(client);
-                sc.getStudentsBySchool(getApplicationContext(), currentUser.getSchoolID(), new ResponseListener() {
+                boolean school_pref = getSharedPreferences(getResources().getString(R.string.roommate_list_preference),
+                        MODE_PRIVATE).getBoolean(getResources().getString(R.string.school_preference),false);
+                sc.getStudentsBySchool(getApplicationContext(), school_pref?currentUser.getSchoolID():-1, new ResponseListener() {
                     @Override
                     public void onSuccess(Response response) {
                         try {
@@ -216,12 +218,16 @@ public class MainHomeActivity extends DrawerBaseActivity implements SortByDialog
     public void onDialogPositiveClick(DialogFragment dialog) {
         Dialog dialogView = dialog.getDialog();
         //update shared preference
+        CheckBox school_checkbox = (CheckBox)dialogView.findViewById(R.id.schoolPreference);
         CheckBox gender_checkbox = (CheckBox)dialogView.findViewById(R.id.genderPreference);
         CheckBox language_checkbox = (CheckBox)dialogView.findViewById(R.id.languagePreference);
         CheckBox country_checkbox = (CheckBox)dialogView.findViewById(R.id.countryPreference);
         CheckBox diet_checkbox = (CheckBox)dialogView.findViewById(R.id.dietPreference);
         CheckBox sleep_checkbox = (CheckBox)dialogView.findViewById(R.id.sleepPreference);
         CheckBox wakeup_checkbox = (CheckBox)dialogView.findViewById(R.id.wakeupPreference);
+        getSharedPreferences(getResources().getString(R.string.roommate_list_preference),
+                MODE_PRIVATE).edit().putBoolean(getResources().getString(R.string.school_preference),
+                school_checkbox.isChecked()).apply();
         getSharedPreferences(getResources().getString(R.string.roommate_list_preference),
                 MODE_PRIVATE).edit().putBoolean(getResources().getString(R.string.gender_preference),
                 gender_checkbox.isChecked()).apply();

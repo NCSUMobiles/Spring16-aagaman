@@ -8,6 +8,11 @@
         android:layout_height="match_parent">
         <TableRow>
             <CheckBox
+                android:id="@+id/schoolPreference"
+                android:hint="Goes to same school" />
+        </TableRow>
+        <TableRow>
+            <CheckBox
                 android:id="@+id/genderPreference"
                 android:hint="Same gender" />
         </TableRow>

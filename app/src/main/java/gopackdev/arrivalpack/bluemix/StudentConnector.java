@@ -128,27 +128,47 @@ public class StudentConnector {
     /**
      * Get school by ID, also need to retreive the stduentJSON from ResponseListerner rl from caller
      * @param ctx
-     * @param schoolID  (if -1, it will get all Students JSON)
+     * @param schoolID  (if -1, it will get all Students JSON) (-1  mean all schools)
      * @param rl
      */
     public void getStudentsBySchool(Context ctx, long schoolID, ResponseListener rl){
-        Request request = new Request(client.getBluemixAppRoute() + subURL +
-                "/getStudentBySchoolID?school_id="+schoolID, Request.GET);
-        JSONObject studentJSON = new JSONObject();
-        context = ctx;
-        HashMap headers = new HashMap();
-        List<String> cType = new ArrayList<>();
-        cType.add("application/json");
-        List<String> accept = new ArrayList<>();
-        accept.add("Application/json");
+        if(schoolID > 0){
+            Request request = new Request(client.getBluemixAppRoute() + subURL +
+                    "/getStudentBySchoolID?school_id="+schoolID, Request.GET);
+            JSONObject studentJSON = new JSONObject();
+            context = ctx;
+            HashMap headers = new HashMap();
+            List<String> cType = new ArrayList<>();
+            cType.add("application/json");
+            List<String> accept = new ArrayList<>();
+            accept.add("Application/json");
 
-        headers.put("Content-Type", cType);
-        headers.put("Accept", accept);
+            headers.put("Content-Type", cType);
+            headers.put("Accept", accept);
 
-        request.setHeaders(headers);
-        addStudentResult = false;
-        Log.i("Student Connector","get studentBySchool");
-        request.send(ctx, rl);
+            request.setHeaders(headers);
+            addStudentResult = false;
+            Log.i("Student Connector","get studentBySchool");
+            request.send(ctx, rl);
+        }else{
+            Request request = new Request(client.getBluemixAppRoute() + subURL, Request.GET);
+            JSONObject studentJSON = new JSONObject();
+            context = ctx;
+            HashMap headers = new HashMap();
+            List<String> cType = new ArrayList<>();
+            cType.add("application/json");
+            List<String> accept = new ArrayList<>();
+            accept.add("Application/json");
+
+            headers.put("Content-Type", cType);
+            headers.put("Accept", accept);
+
+            request.setHeaders(headers);
+            addStudentResult = false;
+            Log.i("Student Connector","get all student");
+            request.send(ctx, rl);
+        }
+
     }
 
     public void getStudentDetails(Context ctx, String studID, ResponseListener rl){

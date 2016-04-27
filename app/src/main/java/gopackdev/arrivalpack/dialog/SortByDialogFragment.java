@@ -54,6 +54,8 @@ public class SortByDialogFragment extends DialogFragment implements CompoundButt
                             }
                         });
         //set check box to previous setting
+        boolean school_pref = getActivity().getSharedPreferences(getResources().getString(R.string.roommate_list_preference),
+                getActivity().MODE_PRIVATE).getBoolean(getResources().getString(R.string.school_preference),false);
         boolean gender_pref = getActivity().getSharedPreferences(getResources().getString(R.string.roommate_list_preference),
                 getActivity().MODE_PRIVATE).getBoolean(getResources().getString(R.string.gender_preference),false);
         boolean language_pref = getActivity().getSharedPreferences(getResources().getString(R.string.roommate_list_preference),
@@ -66,6 +68,8 @@ public class SortByDialogFragment extends DialogFragment implements CompoundButt
                 getActivity().MODE_PRIVATE).getBoolean(getResources().getString(R.string.sleep_preference),false);
         boolean wakeup_pref = getActivity().getSharedPreferences(getResources().getString(R.string.roommate_list_preference),
                 getActivity().MODE_PRIVATE).getBoolean(getResources().getString(R.string.wakeup_preference),false);
+        CheckBox school_checkbox = (CheckBox)customView.findViewById(R.id.schoolPreference);
+        school_checkbox.setChecked(school_pref);
         CheckBox gender_checkbox = (CheckBox)customView.findViewById(R.id.genderPreference);
         gender_checkbox.setChecked(gender_pref);
         CheckBox language_checkbox = (CheckBox)customView.findViewById(R.id.languagePreference);
