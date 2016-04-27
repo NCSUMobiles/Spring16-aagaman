@@ -51,10 +51,10 @@ public class FlightUpdates  extends DrawerBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_flight_updates);
-      //  FrameLayout relativeLayout = (FrameLayout) findViewById(R.id.child_layout);
-      //  LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-      //  relativeLayout.addView(layoutInflater.inflate(R.layout.content_flight_updates, null, false));
+        //setContentView(R.layout.content_flight_updates);
+        FrameLayout relativeLayout = (FrameLayout) findViewById(R.id.child_layout);
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        relativeLayout.addView(layoutInflater.inflate(R.layout.content_flight_updates, null, false));
         //---- avoid override whole base activtiy layout
         client = BMSClient.getInstance();
         try {

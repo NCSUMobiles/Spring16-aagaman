@@ -41,6 +41,13 @@ public class Airport  extends DrawerBaseActivity {
     String flightID = "";
     String test = "Hello";
 
+
+    @Override
+    protected void onResume() {
+        //alreadyExists = false;
+        super.onResume();
+    }
+
     @TargetApi(Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +74,6 @@ public class Airport  extends DrawerBaseActivity {
                 Log.i("Success - Response for Flight ID ", "" + response.toString());
 
                 JSONArray responseArray = null;
-
                 if (response.getResponseText().equals("null")) {
                     alreadyExists = false;
                 } else {

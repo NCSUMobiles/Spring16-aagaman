@@ -137,7 +137,7 @@ public class StudentBean {
             obj.put("something_want_to_try_in_future",this.somethingWantToTryInFuture);
             obj.put("sleep_time",this.sleepTime);
             obj.put("wakeup_time",this.wakeupTime);
-            if(this.id.length() > 0){
+            if(this.id != null && this.id.length() > 0){
                 //if the object converting back to JSON has id...
                 obj.put("id", this.id);
             }

@@ -54,7 +54,7 @@ public class flightConnector {
     }
 
     public void getFlightIDByStudentID(Context ctx, String id, ResponseListener rl1){
-        Request request = new Request(client.getBluemixAppRoute()+subURL+"getFlightIDByStudentID??stud_id="+id, Request.GET);
+        Request request = new Request(client.getBluemixAppRoute()+subURL+"getFlightIDByStudentID?stud_id="+id, Request.GET);
         JSONObject detail = new JSONObject();
         context = ctx;
 
