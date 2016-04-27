@@ -115,7 +115,7 @@ public class MainHomeActivity extends DrawerBaseActivity implements SortByDialog
                             for (int i=0; i<student_list.length(); i++) {
                                 JSONObject tmp_json = student_list.getJSONObject(i);
                                 StudentBean tmp_b = new StudentBean(tmp_json);
-                                student_base_list.add(tmp_b);
+                                if(!tmp_b.getID().equals(currentUser.getID())) student_base_list.add(tmp_b);
                             }
                             ReOrderList reOrderList = new ReOrderList();
                             boolean gender_pref = getSharedPreferences(getResources().getString(R.string.roommate_list_preference),

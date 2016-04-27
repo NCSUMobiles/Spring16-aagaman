@@ -195,6 +195,7 @@ public class FlightUpdates  extends DrawerBaseActivity {
 
        // final TableLayout table = new TableLayout(FlightUpdates.this);
          final TableLayout table = (TableLayout)findViewById(R.id.TL);
+        //table.invalidate();
         table.setStretchAllColumns(true);
         table.setShrinkAllColumns(true);
 
