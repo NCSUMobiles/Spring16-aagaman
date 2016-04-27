@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gopackdev.arrivalpack.dialog.SortByDialogFragment">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow>
+            <CheckBox
+                android:id="@+id/genderPreference"
+                android:hint="Same gender" />
+        </TableRow>
+        <TableRow>
+            <CheckBox
+                android:id="@+id/languagePreference"
+                android:hint="Speaks the same language" />
+        </TableRow>
+        <TableRow>
+            <CheckBox
+                android:id="@+id/countryPreference"
+                android:hint="From the same country" />
+        </TableRow>
+        <TableRow>
+            <CheckBox
+                android:id="@+id/dietPreference"
+                android:hint="Has the same dietary restriction" />
+        </TableRow>
+        <TableRow>
+            <CheckBox
+                android:id="@+id/sleepPreference"
+                android:hint="Sleeps at the same time" />
+        </TableRow>
+        <TableRow>
+            <CheckBox
+                android:id="@+id/wakeupPreference"
+                android:hint="Wakes up at the same time" />
+        </TableRow>
+    </TableLayout>
+    <!-- TODO: Update blank fragment layout -->
+
+
+</FrameLayout>

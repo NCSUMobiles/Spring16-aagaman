@@ -8,9 +8,19 @@
     <string name="student_details_activity">Student Details</string>
     <!-- SharedPrefernce-->
     <!-- for now caching only studnet db ID-->
+    <string name="sort_by_dialog_title">I want my roommate...</string>
     <string name="login_cache">LoginCache</string>
     <string name="login_token">LoginToken</string>
     <!-- Strings related to login -->
+    <!-- Strings for list filter settings-->
+    <string name="roommate_list_preference">RoommateListPreference</string>
+    <string name="gender_preference">GenderPreference</string>
+    <string name="language_preference">LanguagePreference</string>
+    <string name="country_preference">CountryPreference</string>
+    <string name="diet_preference">DietPreference</string>
+    <string name="sleep_preference">SleepPreference</string>
+    <string name="wakeup_preference">WakeupPreference</string>
+    <!-- end-->
     <string name="prompt_email">Email (Required)</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in</string>
@@ -184,5 +194,8 @@
     </string>
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_main_home">MainHomeActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

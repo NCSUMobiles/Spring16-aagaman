@@ -49,7 +49,16 @@ public class RoommateRecycleAdapter extends RecyclerView.Adapter<RoommateRecycle
             chatBtn = (Button) itemView.findViewById(R.id.chatBtn);
         }
     }
-
+    public void swapWholeList(List<StudentBean> datas){
+//        studentBeanList.clear();
+        int size = studentBeanList.size();
+        for(int i = size - 1; i>= 0; i--) {
+            studentBeanList.remove(i);
+            notifyItemRemoved(i);
+        }
+        studentBeanList.addAll(datas);
+        notifyDataSetChanged();
+    }
     // Provide a suitable constructor (depends on the kind of dataset)
     public RoommateRecycleAdapter(List<StudentBean> myDataset, Activity ctx) {
         studentBeanList = myDataset;

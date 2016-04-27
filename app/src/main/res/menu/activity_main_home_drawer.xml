@@ -4,7 +4,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/roommate_suggestions"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/ic_roommate_suggestion"
             android:title="Roommate Suggestions" />
         <item
             android:id="@+id/add_flight_info"
