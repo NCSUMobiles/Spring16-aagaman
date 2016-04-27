@@ -21,6 +21,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import gopackdev.arrivalpack.baseactivities.DrawerBaseActivity;
 import gopackdev.arrivalpack.bluemix.flightConnector;
@@ -34,6 +37,9 @@ public class FlightUpdates  extends DrawerBaseActivity {
     String stud_id1 = "";
     String flight_Date = "";
     String fltNum = "";
+    List<String> flightNumber = new ArrayList();
+    List<String> flightDate = new ArrayList();
+    List<String> StudentIds = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +90,6 @@ public class FlightUpdates  extends DrawerBaseActivity {
 
     public void checkFlightBuddies(){
         // Getting the Flight Date based on the flight id
-
         flightConnector flConn1 = new flightConnector(client);
         flConn1.getFlightDateByFlightID(FlightUpdates.this, flightID, new ResponseListener() {
             @Override
@@ -95,9 +100,11 @@ public class FlightUpdates  extends DrawerBaseActivity {
                         JSONObject row = array.getJSONObject(i);
                         fltNum = row.optString("flight_number").toString();
                         flight_Date = row.optString("flight_date").toString();
-
-                        getFlightBuddies(fltNum, flight_Date);
+                        flightNumber.add(fltNum);
+                        flightDate.add(flight_Date);
                     }
+                    getFlightBuddies(flightNumber, flightDate);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -110,23 +117,53 @@ public class FlightUpdates  extends DrawerBaseActivity {
         });
     }
 
-    public void getFlightBuddies(String num, String date){
+    public void getFlightBuddies(List<String> flightNumber, List<String> flightDate){
         // Get Flight Buddies information
+        Iterator iterator1 = flightNumber.iterator();
+        Iterator iterator2 = flightDate.iterator();
+        while(iterator1.hasNext() && iterator2.hasNext()){
+            String fNum = (String) iterator1.next();
+            String fDat = (String) iterator2.next();
 
-        FlightBuddies fbean = new FlightBuddies(stud_id1,num,date);
+            FlightBuddies fbean = new FlightBuddies(fNum,fDat);
+            flightConnector flConn2 = new flightConnector(client);
+            flConn2.getFlightBuddies(FlightUpdates.this, fbean, new ResponseListener() {
+                @Override
+                public void onSuccess(Response response) {
+                    System.out.println("Success");
+                    JSONArray array = null;
+                    try {
+                        array = new JSONArray(response.getResponseText());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    for (int i = 0; i < array.length(); i++) {
+                        System.out.println("INSIDE FOR LOOP");
+                        JSONObject row = null;
+                        try {
+                            row = array.getJSONObject(i);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        String sID = row.optString("student_id").toString();
+                        StudentIds.add(sID);
+                        System.out.println("Student ID" +sID);
+                    }
+                    displayBuddyList(StudentIds);
+                    System.out.println("Successfully received");
+                }
 
-        flightConnector flConn2 = new flightConnector(client);
-        flConn2.getFlightBuddies(FlightUpdates.this, fbean, new ResponseListener() {
-            @Override
-            public void onSuccess(Response response) {
-                Log.i("Flight Buddies recieved", response.getResponseText());
-            }
+                @Override
+                public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
+                    System.out.println("Failure");
+                    Log.i("Flight Buddies not recieved", " " + t.toString());
+                }
+            });
+        }
+    }
 
-            @Override
-            public void onFailure(Response response, Throwable t, JSONObject extendedInfo) {
-                Log.i("Flight Buddies not recieved"," ");
-            }
-        });
+    public void displayBuddyList(List<String> SIds){
+        
     }
 
 

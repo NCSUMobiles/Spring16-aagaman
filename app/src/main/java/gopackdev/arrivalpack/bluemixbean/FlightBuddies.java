@@ -14,6 +14,10 @@ public class FlightBuddies {
     String Flight_Number;
     String Date;
 
+    public FlightBuddies(String flight_Number, String date){
+        this.Flight_Number = flight_Number;
+        this.Date = date;
+    }
     public FlightBuddies(String id, String flight_Number, String date){
         this.Student_ID = id;
         this.Flight_Number = flight_Number;

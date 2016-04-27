@@ -113,7 +113,7 @@ public class flightConnector {
         String flight_number = fbean.getFlight_ID(); // Returns flight number
         System.out.println("FLIGHT CONNECTOR - FLIGHT DATE " +flight_date);
         System.out.println("FLIGHT CONNECTOR - FLIGHT NUMBER " + flight_number);
-        Request request = new Request(client.getBluemixAppRoute()+subURL+"getFlightBuddies?flight_info=[{\"flight_number\":\"" +flight_number +"\",\"flight_date\":\"" +flight_date+"\"}]", Request.GET);
+        Request request = new Request(client.getBluemixAppRoute()+subURL+"getFlightBuddies?flight_info=%5B%7B%22flight_number%22%3A%22"+flight_number+"%22%2C%22flight_date%22%3A%22"+ flight_date+"%22%7D%5D", Request.GET);
         context = ctx;
 
         HashMap headers = new HashMap();
