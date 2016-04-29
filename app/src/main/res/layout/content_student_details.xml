@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="1"
+            android:id="@+id/detailTable"
+            >
+            <TableRow>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/portraitView"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="25dp"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:src="@mipmap/ic_female_default_portrait"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/schoolLogoView"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="25dp"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:src="@mipmap/ncsu_logo_ic"
+                    android:layout_weight="1"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="University"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:id="@+id/university"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="North Carolina State University"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:id="@+id/schoolText"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Gender"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/genderText"
+                    android:text="Female"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="First Name"
+                    android:id="@+id/firstName"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Jenny"
+                    android:id="@+id/firstNameText"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Last Name"
+                    android:id="@+id/lastName"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                     />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Lin"
+                    android:id="@+id/lastNameText"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="0dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="First Language"
+                    android:id="@+id/firstLanguage"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                   />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="English"
+                    android:id="@+id/firstLanguageText"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Nationality"
+                    android:id="@+id/nationality"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Taiwan"
+                    android:id="@+id/nationalityText"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Dietary Restriction"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:id="@+id/dietary_restriction"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="None"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:id="@+id/dietaryRestrictionText"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Interest &amp; Expertise"
+                    android:id="@+id/interest_expertise"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Computer programming"
+                    android:id="@+id/interestExpertiseText"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Sleep Time"
+                    android:id="@+id/sleepTimeTag"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="20:00"
+                    android:id="@+id/sleepTimeText"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Wake Time"
+                    android:id="@+id/wakeTimeTag"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="10:00"
+                    android:id="@+id/wakeTimeText"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Club Participated"
+                    android:id="@+id/club_participated"
+                    android:layout_gravity="left"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                     />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Tennis club, starcraft club"
+                    android:id="@+id/clubParticipatedText"
+                    android:layout_gravity="left"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Favorite Class(es)"
+                    android:id="@+id/favorite_class"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                   />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="CSC264\nCSC505\nCSC720"
+                    android:id="@+id/favoriteClassText"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Recent Concern"
+                    android:id="@+id/recent_concern"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                     />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="No girlfriend"
+                    android:id="@+id/recentConcernText"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Something want to try in future"
+                    android:id="@+id/something_want_to_try_in_future"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                     />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="sky diving"
+                    android:id="@+id/something_want_to_try_in_future_Text"
+                    android:layout_gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0099CC</color>
+    <color name="colorPrimaryDark">#003399</color>
+    <color name="colorAccent">#66CCFF</color>
+    <color name="background">#708090 </color>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="year">#999999</color>
+    <color name="title">#222222</color>
+    <item name="default_inlineaction" type="color">#1b301800</item>
+    <item name="selected_inlineaction" type="color">#3F301800</item>
+</resources>

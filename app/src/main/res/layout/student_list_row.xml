@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_view_item_background"
+    android:orientation="horizontal"
+    android:layout_margin="5dp">
+
+    <!-- plan title -->
+
+    <TextView
+        android:id="@+id/studentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/plans_list_item_text_padding"
+        android:text="Hans Wang"
+        android:textColor="#ff585858"
+        android:textSize="@dimen/plans_list_item_title_size"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- course code -->
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/genderIcon"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/studentCountry"
+        android:src="@mipmap/ic_boy" />
+
+    <!-- time -->
+
+    <TextView
+        android:id="@+id/studentEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studentName"
+        android:padding="@dimen/plans_list_item_text_padding"
+        android:text="cwang25@ncsu.edu"
+        android:textColor="#ff747474"
+        android:textSize="@dimen/plans_list_item_text_size" />
+
+    <!-- location -->
+
+    <TextView
+        android:id="@+id/studentCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/studentName"
+        android:gravity="right"
+        android:padding="@dimen/plans_list_item_text_padding"
+        android:text="Taiwan"
+        android:textColor="#ff747474"
+        android:textSize="@dimen/plans_list_item_text_size" />
+
+    <!-- plan members -->
+
+
+    <!-- buttons; using textviews in place of buttons to get rid of buttons' crappy UI -->
+
+    <LinearLayout
+        android:id="@+id/bottomBanner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/studentCountry"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/detailsBtn"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Details"
+            style= "@style/InlineActionButton"
+            />
+        <Button
+            android:id="@+id/chatBtn"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Send Message"
+            style= "@style/InlineActionButton"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
