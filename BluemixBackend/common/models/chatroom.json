@@ -1,0 +1,27 @@
+{
+  "name": "Chatroom",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "chatter1": {
+      "type": "string",
+      "required": true
+    },
+    "chatter2": {
+      "type": "boolean",
+      "required": true
+    },
+    "chatmessages":{
+      "type": "array",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
