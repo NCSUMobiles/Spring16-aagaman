@@ -8,3 +8,18 @@ Connecting story to place, for friends, communities and organizations of all kin
 Native source code android app.
 
 Node js Bluemix project with MobileFirst and Cloudant DB service integrated.
+
+Team members:
+* Chi-Han Wang
+* Vamsi Vikash
+* Mahmoud Tohmaz
+* Pranesha Shashwath Kumar
+* Abhishek Venkataraman
+* Jake Borland
+
+Setup:
+Download and install from Google play store.
+
+
+
+
