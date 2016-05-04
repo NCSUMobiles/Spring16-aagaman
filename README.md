@@ -34,8 +34,8 @@ Download and install from
 [](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/7.png)
 [](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/8.png)
 
-Presentation:
+### Presentation:
 [Click here for the presentation](https://docs.google.com/presentation/d/1hvgHjs2hUG8io9vA1gdW3qyA0SEOCmlT7IYAbH_sPGU/edit?usp=sharing)
 
-Video:
+### Video:
 [Click here for video](https://www.youtube.com/watch?v=g4VLAK71-a8)
