@@ -24,6 +24,14 @@ Download and install from
 ![](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/ini/6.png)
 ![](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/ini/7.png)
 
+![](https://github.com/ShashwathKumar/Spring16-aagaman/blob/master/extra/1.png)
+![](https://github.com/ShashwathKumar/Spring16-aagaman/blob/master/extra/2.png)
+![](https://github.com/ShashwathKumar/Spring16-aagaman/blob/master/extra/3.png)
+![](https://github.com/ShashwathKumar/Spring16-aagaman/blob/master/extra/4.png)
+![](https://github.com/ShashwathKumar/Spring16-aagaman/blob/master/extra/5.png)
+![](https://github.com/ShashwathKumar/Spring16-aagaman/blob/master/extra/6.png)
+![](https://github.com/ShashwathKumar/Spring16-aagaman/blob/master/extra/7.png)
+
 ### Final screenshots
 ![](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/1.png)
 ![](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/2.png)
