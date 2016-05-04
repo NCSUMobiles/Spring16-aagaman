@@ -16,5 +16,26 @@ Download and install from
 
 ### Initial Prototype:
 
-[](https://photos.google.com/u/2/share/AF1QipMhttjy5JVIM2Q3wHKW01ikFzFhg0kCbWHDVzbI8Zm_SSsv4BDZPxl0JCk4oHvUYw?key=d3NLLURuR19raUJhcS1zQ1FsRTlFQ0E5cUlmazN3)
-[](https://goo.gl/photos/tmWYMRErBL5PkGdh7)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/ini/1.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/ini/2.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/ini/3.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/ini/4.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/ini/5.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/ini/6.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/ini/7.png)
+
+### Final screenshots
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/1.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/2.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/3.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/4.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/5.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/6.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/7.png)
+[](https://github.com/NCSUMobiles/Spring16-aagaman/blob/master/BluemixBackend/zimgs/final/8.png)
+
+### Presentation:
+[Click here for the presentation](https://docs.google.com/presentation/d/1hvgHjs2hUG8io9vA1gdW3qyA0SEOCmlT7IYAbH_sPGU/edit?usp=sharing)
+
+### Video:
+[Click here for video](https://www.youtube.com/watch?v=g4VLAK71-a8)
